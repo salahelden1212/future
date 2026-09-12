@@ -44,13 +44,13 @@ const About = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-1/4 w-[500px] h-[500px] bg-amber-500/10 rounded-full blur-[150px]"></div>
+        <div className="absolute top-20 left-1/4 w-[500px] h-[500px] bg-brand-500/10 rounded-full blur-[150px]"></div>
         <div className="absolute bottom-20 right-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[150px]"></div>
       </div>
 
       {/* Grid Pattern */}
       <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: `linear-gradient(rgba(212, 175, 55, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(212, 175, 55, 0.3) 1px, transparent 1px)`,
+        backgroundImage: `linear-gradient(rgba(99, 102, 241, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(99, 102, 241, 0.3) 1px, transparent 1px)`,
         backgroundSize: '50px 50px'
       }}></div>
 
@@ -67,17 +67,17 @@ const About = () => {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500/20 to-amber-600/20 backdrop-blur-sm border border-amber-500/30 rounded-full px-6 py-2 mb-6"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-brand-500/10 to-brand-700/20 backdrop-blur-sm border border-brand-500/30 rounded-full px-6 py-2 mb-6"
             >
-              <FaStar className="text-amber-400" />
-              <span className="text-amber-300 font-medium">
+              <FaStar className="text-brand-400" />
+              <span className="text-brand-300 font-medium">
                 {isArabic ? 'تعرف علينا' : 'About Us'}
               </span>
             </motion.div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
               <span className="text-white">{isArabic ? 'من ' : 'Who '}</span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 via-brand-300 to-brand-500">
                 {isArabic ? 'نحن؟' : 'We Are'}
               </span>
             </h1>
@@ -95,7 +95,7 @@ const About = () => {
                 className="h-32 md:h-40 w-auto object-contain mb-4"
               />
               <h2 className="text-3xl md:text-4xl font-black tracking-wider">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500">FUTURE</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 via-brand-300 to-brand-500">FUTURE</span>
                 <span className="text-white ml-2">FINISH</span>
               </h2>
               <p className="text-sm text-gray-400 tracking-[0.25em] uppercase mt-2">Finishing at the highest level</p>
@@ -124,11 +124,11 @@ const About = () => {
                 transition={{ delay: index * 0.1 }}
                 className="relative group"
               >
-                <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-xl rounded-2xl p-6 text-center border border-gray-700/50 hover:border-amber-500/50 transition-all duration-300 hover:-translate-y-2">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-amber-500/20 to-yellow-500/20 mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <stat.icon className="text-2xl text-amber-400" />
+                <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-xl rounded-2xl p-6 text-center border border-gray-700/50 hover:border-brand-500/50 transition-all duration-300 hover:-translate-y-2">
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-brand-500/10 to-brand-500/20 mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <stat.icon className="text-2xl text-brand-400" />
                   </div>
-                  <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-300 mb-2">
+                  <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-300 mb-2">
                     {stat.value}
                   </div>
                   <div className="text-gray-400 text-sm">{stat.label}</div>
@@ -146,10 +146,10 @@ const About = () => {
               viewport={{ once: true }}
               className="relative group"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-amber-500/20 to-yellow-500/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
-              <div className="relative bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50 hover:border-amber-500/50 transition-all duration-300 h-full">
+              <div className="absolute inset-0 bg-gradient-to-r from-brand-500/10 to-brand-500/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
+              <div className="relative bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50 hover:border-brand-500/50 transition-all duration-300 h-full">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-400 flex items-center justify-center">
+                  <div className="w-14 h-14 rounded-xl bg-gradient-to-r from-brand-500 to-brand-400 flex items-center justify-center">
                     <FaEye className="text-2xl text-gray-900" />
                   </div>
                   <h2 className="text-3xl font-bold text-white">
@@ -211,11 +211,11 @@ const About = () => {
                   transition={{ delay: index * 0.1 }}
                   className="group"
                 >
-                  <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-xl rounded-2xl p-6 border border-gray-700/50 hover:border-amber-500/50 transition-all duration-300 hover:-translate-y-2 text-center h-full">
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r from-amber-500/10 to-yellow-500/10 mb-4 group-hover:bg-gradient-to-r group-hover:from-amber-500 group-hover:to-yellow-400 transition-all duration-300">
-                      <value.icon className="text-2xl text-amber-400 group-hover:text-gray-900 transition-colors duration-300" />
+                  <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-xl rounded-2xl p-6 border border-gray-700/50 hover:border-brand-500/50 transition-all duration-300 hover:-translate-y-2 text-center h-full">
+                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r from-brand-500/10 to-brand-500/10 mb-4 group-hover:bg-gradient-to-r group-hover:from-brand-500 group-hover:to-brand-400 transition-all duration-300">
+                      <value.icon className="text-2xl text-brand-400 group-hover:text-gray-900 transition-colors duration-300" />
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-amber-400 transition-colors duration-300">
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-brand-400 transition-colors duration-300">
                       {value.title}
                     </h3>
                     <p className="text-gray-400 text-sm leading-relaxed">
@@ -255,7 +255,7 @@ const About = () => {
                   transition={{ delay: index * 0.1 }}
                   className="flex items-start gap-4"
                 >
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-r from-amber-500 to-yellow-400 flex items-center justify-center">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-r from-brand-500 to-brand-400 flex items-center justify-center">
                     <FaCheck className="text-gray-900 text-sm" />
                   </div>
                   <p className="text-gray-300 text-lg">{item}</p>

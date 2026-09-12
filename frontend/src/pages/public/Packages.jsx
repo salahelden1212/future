@@ -33,7 +33,7 @@ const Packages = () => {
 
   const getBadgeConfig = (badge) => {
     const configs = {
-      vip: { icon: FaCrown, gradient: 'from-amber-500 via-yellow-400 to-amber-600', text: 'VIP' },
+      vip: { icon: FaCrown, gradient: 'from-brand-500 via-brand-400 to-brand-700', text: 'VIP' },
       premium: { icon: FaGem, gradient: 'from-purple-500 via-violet-400 to-purple-600', text: 'PREMIUM' },
       popular: { icon: FaStar, gradient: 'from-blue-500 via-cyan-400 to-blue-600', text: 'POPULAR' },
       best: { icon: FaShieldAlt, gradient: 'from-green-500 via-emerald-400 to-green-600', text: 'BEST VALUE' },
@@ -46,7 +46,7 @@ const Packages = () => {
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center justify-center">
         <div className="text-center">
           <div className="relative">
-            <div className="w-20 h-20 border-4 border-amber-200 rounded-full animate-spin border-t-amber-500 mx-auto"></div>
+            <div className="w-20 h-20 border-4 border-brand-200 rounded-full animate-spin border-t-brand-500 mx-auto"></div>
             <div className="w-14 h-14 border-4 border-gray-200 rounded-full animate-spin border-t-gray-500 mx-auto absolute top-3 left-1/2 -translate-x-1/2" style={{ animationDirection: 'reverse' }}></div>
           </div>
           <p className="mt-6 text-gray-400 text-lg">{isArabic ? 'جاري تحميل الباقات...' : 'Loading packages...'}</p>
@@ -59,14 +59,14 @@ const Packages = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
       {/* Premium Background Effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-amber-500/10 rounded-full blur-[120px]"></div>
+        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-brand-500/10 rounded-full blur-[120px]"></div>
         <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[120px]"></div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-500/5 rounded-full blur-[150px]"></div>
       </div>
 
       {/* Animated Grid Pattern */}
       <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: `linear-gradient(rgba(212, 175, 55, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(212, 175, 55, 0.3) 1px, transparent 1px)`,
+        backgroundImage: `linear-gradient(rgba(99, 102, 241, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(99, 102, 241, 0.3) 1px, transparent 1px)`,
         backgroundSize: '50px 50px'
       }}></div>
 
@@ -83,17 +83,17 @@ const Packages = () => {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500/20 to-amber-600/20 backdrop-blur-sm border border-amber-500/30 rounded-full px-6 py-2 mb-6"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-brand-500/10 to-brand-700/20 backdrop-blur-sm border border-brand-500/30 rounded-full px-6 py-2 mb-6"
             >
-              <FaStar className="text-amber-400" />
-              <span className="text-amber-300 font-medium">
+              <FaStar className="text-brand-400" />
+              <span className="text-brand-300 font-medium">
                 {isArabic ? 'باقات حصرية' : 'Exclusive Packages'}
               </span>
             </motion.div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
               <span className="text-white">{isArabic ? 'اختر ' : 'Choose '}</span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 via-brand-300 to-brand-500">
                 {isArabic ? 'باقتك' : 'Your Package'}
               </span>
             </h1>
@@ -161,7 +161,7 @@ const Packages = () => {
                       )}
 
                       {/* Package Name */}
-                      <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 group-hover:text-amber-400 transition-colors duration-300">
+                      <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 group-hover:text-brand-400 transition-colors duration-300">
                         {isArabic ? pkg.name.ar : pkg.name.en}
                       </h3>
 
@@ -183,11 +183,11 @@ const Packages = () => {
                           </span>
                         </div>
                         <div className="flex items-baseline gap-2 flex-wrap">
-                          <span className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-300">
+                          <span className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-300">
                             {pkg.priceAfter.toLocaleString()}
                           </span>
                           <span className="text-gray-400 text-lg">{isArabic ? 'جنيه' : 'EGP'}</span>
-                          <span className="text-amber-400/80 text-sm font-medium">/ {isArabic ? 'للمتر' : 'per m²'}</span>
+                          <span className="text-brand-400/80 text-sm font-medium">/ {isArabic ? 'للمتر' : 'per m²'}</span>
                         </div>
                       </div>
 
@@ -208,7 +208,7 @@ const Packages = () => {
                           </motion.li>
                         ))}
                         {pkg.features.length > 6 && (
-                          <li className="text-amber-400 text-sm font-medium">
+                          <li className="text-brand-400 text-sm font-medium">
                             +{pkg.features.length - 6} {isArabic ? 'ميزة إضافية' : 'more features'}
                           </li>
                         )}
@@ -225,7 +225,7 @@ const Packages = () => {
                           rel="noopener noreferrer"
                           className={`w-full flex items-center justify-center gap-3 py-4 rounded-xl font-bold text-lg transition-all duration-300 ${
                             isVIP
-                              ? 'bg-gradient-to-r from-amber-500 to-yellow-400 text-gray-900 hover:shadow-xl hover:shadow-amber-500/30'
+                              ? 'bg-gradient-to-r from-brand-500 to-brand-400 text-gray-900 hover:shadow-xl hover:shadow-brand-500/30'
                               : 'bg-gradient-to-r from-green-500 to-emerald-400 text-white hover:shadow-xl hover:shadow-green-500/30'
                           } transform hover:scale-[1.02]`}
                         >
@@ -239,7 +239,7 @@ const Packages = () => {
                             href={pkg.pdfUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-full flex items-center justify-center gap-2 py-3 rounded-xl border-2 border-gray-600 text-gray-300 hover:border-amber-500 hover:text-amber-400 transition-all duration-300"
+                            className="w-full flex items-center justify-center gap-2 py-3 rounded-xl border-2 border-gray-600 text-gray-300 hover:border-brand-500 hover:text-brand-400 transition-all duration-300"
                           >
                             <FaDownload />
                             <span>{isArabic ? 'تحميل الملف التفصيلي' : 'Download Details PDF'}</span>
@@ -276,7 +276,7 @@ const Packages = () => {
                 href={getWhatsAppLink(settings?.whatsapp || '+201000000000', isArabic ? 'مرحباً، أريد باقة مخصصة' : 'Hello, I want a custom package')}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gradient-to-r from-amber-500 to-yellow-400 text-gray-900 px-8 py-4 rounded-xl font-bold hover:shadow-xl hover:shadow-amber-500/30 transition-all duration-300 flex items-center gap-2"
+                className="bg-gradient-to-r from-brand-500 to-brand-400 text-gray-900 px-8 py-4 rounded-xl font-bold hover:shadow-xl hover:shadow-brand-500/30 transition-all duration-300 flex items-center gap-2"
               >
                 <FaWhatsapp className="text-xl" />
                 <span>{isArabic ? 'باقة مخصصة' : 'Custom Package'}</span>

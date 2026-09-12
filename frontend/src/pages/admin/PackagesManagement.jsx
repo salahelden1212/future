@@ -146,7 +146,7 @@ const PackagesManagement = () => {
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
-            Packages <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-300">Management</span>
+            Packages <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-300">Management</span>
           </h1>
           <p className="text-gray-400">Manage service packages and pricing</p>
         </div>
@@ -154,7 +154,7 @@ const PackagesManagement = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => setShowModal(true)}
-          className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-amber-500 to-yellow-400 text-gray-900 rounded-xl font-semibold shadow-lg shadow-amber-500/20 hover:shadow-amber-500/40 transition-all"
+          className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-brand-500 to-brand-400 text-gray-900 rounded-xl font-semibold shadow-lg shadow-brand-500/20 hover:shadow-brand-500/40 transition-all"
         >
           <FaPlus />
           <span>Add Package</span>
@@ -164,7 +164,7 @@ const PackagesManagement = () => {
       {/* Stats Cards */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {[
-          { label: 'Total Packages', value: packages.length, gradient: 'from-amber-500 to-yellow-500', icon: FaBox },
+          { label: 'Total Packages', value: packages.length, gradient: 'from-brand-500 to-brand-500', icon: FaBox },
           { label: 'Active', value: packages.filter(p => p.isActive).length, gradient: 'from-green-500 to-emerald-500', icon: FaCheckCircle },
           { label: 'VIP', value: packages.filter(p => p.badge === 'vip').length, gradient: 'from-purple-500 to-pink-500', icon: FaCrown },
           { label: 'Popular', value: packages.filter(p => p.badge === 'popular').length, gradient: 'from-blue-500 to-cyan-500', icon: FaFire },
@@ -191,7 +191,7 @@ const PackagesManagement = () => {
         <div className="flex items-center justify-center h-64">
           <div className="text-center">
             <div className="relative">
-              <div className="w-16 h-16 border-4 border-amber-200 rounded-full animate-spin border-t-amber-500 mx-auto"></div>
+              <div className="w-16 h-16 border-4 border-brand-200 rounded-full animate-spin border-t-brand-500 mx-auto"></div>
               <div className="w-10 h-10 border-4 border-gray-200 rounded-full animate-spin border-t-gray-500 mx-auto absolute top-3 left-1/2 -translate-x-1/2" style={{ animationDirection: 'reverse' }}></div>
             </div>
             <p className="mt-4 text-gray-400">Loading packages...</p>
@@ -213,12 +213,12 @@ const PackagesManagement = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              className="bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-xl rounded-2xl border border-gray-700/50 p-6 hover:border-amber-500/30 transition-all"
+              className="bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-xl rounded-2xl border border-gray-700/50 p-6 hover:border-brand-500/30 transition-all"
             >
               <div className="flex justify-between items-start">
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-yellow-400 flex items-center justify-center">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-500 to-brand-400 flex items-center justify-center">
                       <FaGem className="text-gray-900 text-lg" />
                     </div>
                     <div>
@@ -248,9 +248,9 @@ const PackagesManagement = () => {
                       <span className="text-gray-500 text-xs uppercase tracking-wider">Before</span>
                       <p className="text-gray-500 line-through text-lg font-medium">{pkg.priceBefore.toLocaleString()} EGP</p>
                     </div>
-                    <div className="p-3 bg-gradient-to-br from-amber-500/10 to-yellow-500/10 rounded-xl border border-amber-500/20">
-                      <span className="text-amber-400/70 text-xs uppercase tracking-wider">After</span>
-                      <p className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-300 font-bold text-xl">{pkg.priceAfter.toLocaleString()} EGP</p>
+                    <div className="p-3 bg-gradient-to-br from-brand-500/10 to-brand-500/10 rounded-xl border border-brand-500/20">
+                      <span className="text-brand-400/70 text-xs uppercase tracking-wider">After</span>
+                      <p className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-300 font-bold text-xl">{pkg.priceAfter.toLocaleString()} EGP</p>
                     </div>
                     <div className="p-3 bg-green-500/10 rounded-xl border border-green-500/20">
                       <span className="text-green-400/70 text-xs uppercase tracking-wider">Save</span>
@@ -263,7 +263,7 @@ const PackagesManagement = () => {
                     <div className="grid md:grid-cols-2 gap-2">
                       {pkg.features.map((feature, idx) => (
                         <div key={idx} className="flex items-center gap-2.5 p-2 bg-gray-800/30 rounded-lg">
-                          <FaStar className="text-amber-500 text-xs flex-shrink-0" />
+                          <FaStar className="text-brand-500 text-xs flex-shrink-0" />
                           <span className="text-gray-300 text-sm">{feature.en}</span>
                         </div>
                       ))}
@@ -357,7 +357,7 @@ const PackagesManagement = () => {
                     required
                     value={formData.name.en}
                     onChange={(e) => setFormData({ ...formData, name: { ...formData.name, en: e.target.value } })}
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white transition-all"
+                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white transition-all"
                     placeholder="Premium Package"
                   />
                 </div>
@@ -370,7 +370,7 @@ const PackagesManagement = () => {
                     required
                     value={formData.name.ar}
                     onChange={(e) => setFormData({ ...formData, name: { ...formData.name, ar: e.target.value } })}
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white text-right transition-all"
+                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white text-right transition-all"
                     placeholder="باقة مميزة"
                     dir="rtl"
                   />
@@ -384,7 +384,7 @@ const PackagesManagement = () => {
                     rows="3"
                     value={formData.description.en}
                     onChange={(e) => setFormData({ ...formData, description: { ...formData.description, en: e.target.value } })}
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white transition-all resize-none"
+                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white transition-all resize-none"
                     placeholder="Comprehensive finishing package..."
                   />
                 </div>
@@ -397,7 +397,7 @@ const PackagesManagement = () => {
                     rows="3"
                     value={formData.description.ar}
                     onChange={(e) => setFormData({ ...formData, description: { ...formData.description, ar: e.target.value } })}
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white text-right transition-all resize-none"
+                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white text-right transition-all resize-none"
                     placeholder="باقة تشطيبات شاملة..."
                     dir="rtl"
                   />
@@ -415,7 +415,7 @@ const PackagesManagement = () => {
                         min="0"
                         value={formData.priceBefore}
                         onChange={(e) => setFormData({ ...formData, priceBefore: e.target.value })}
-                        className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white transition-all"
+                        className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white transition-all"
                         placeholder="8000"
                       />
                     </div>
@@ -430,7 +430,7 @@ const PackagesManagement = () => {
                         min="0"
                         value={formData.priceAfter}
                         onChange={(e) => setFormData({ ...formData, priceAfter: e.target.value })}
-                        className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white transition-all"
+                        className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white transition-all"
                         placeholder="6000"
                       />
                     </div>
@@ -443,7 +443,7 @@ const PackagesManagement = () => {
                   <select
                     value={formData.badge}
                     onChange={(e) => setFormData({ ...formData, badge: e.target.value })}
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none text-white cursor-pointer"
+                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none text-white cursor-pointer"
                   >
                     <option value="">None</option>
                     <option value="gold"> Gold</option>
@@ -462,7 +462,7 @@ const PackagesManagement = () => {
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       onClick={addFeature}
-                      className="text-amber-400 hover:text-amber-300 text-sm flex items-center gap-1 px-3 py-1.5 bg-amber-500/10 rounded-lg border border-amber-500/20"
+                      className="text-brand-400 hover:text-brand-300 text-sm flex items-center gap-1 px-3 py-1.5 bg-brand-500/10 rounded-lg border border-brand-500/20"
                     >
                       <FaPlus /> Add Feature
                     </motion.button>
@@ -475,7 +475,7 @@ const PackagesManagement = () => {
                             type="text"
                             value={feature.en}
                             onChange={(e) => updateFeature(index, 'en', e.target.value)}
-                            className="flex-1 px-4 py-2.5 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none text-white text-sm transition-all"
+                            className="flex-1 px-4 py-2.5 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none text-white text-sm transition-all"
                             placeholder="Feature in English..."
                           />
                           {formData.features.length > 1 && (
@@ -494,7 +494,7 @@ const PackagesManagement = () => {
                           type="text"
                           value={feature.ar}
                           onChange={(e) => updateFeature(index, 'ar', e.target.value)}
-                          className="w-full px-4 py-2.5 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none text-white text-sm text-right transition-all"
+                          className="w-full px-4 py-2.5 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none text-white text-sm text-right transition-all"
                           placeholder="الميزة بالعربية..."
                           dir="rtl"
                         />
@@ -510,7 +510,7 @@ const PackagesManagement = () => {
                     id="isActive"
                     checked={formData.isActive}
                     onChange={(e) => setFormData({ ...formData, isActive: e.target.checked })}
-                    className="w-5 h-5 rounded border-gray-600 bg-gray-700 text-amber-500 focus:ring-amber-500 focus:ring-offset-gray-800"
+                    className="w-5 h-5 rounded border-gray-600 bg-gray-700 text-brand-500 focus:ring-brand-500 focus:ring-offset-gray-800"
                   />
                   <span className="text-gray-300">Active (visible on website)</span>
                 </label>
@@ -521,7 +521,7 @@ const PackagesManagement = () => {
                     type="submit"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="flex-1 py-3 bg-gradient-to-r from-amber-500 to-yellow-400 text-gray-900 rounded-xl font-bold shadow-lg shadow-amber-500/20 hover:shadow-amber-500/40 transition-all"
+                    className="flex-1 py-3 bg-gradient-to-r from-brand-500 to-brand-400 text-gray-900 rounded-xl font-bold shadow-lg shadow-brand-500/20 hover:shadow-brand-500/40 transition-all"
                   >
                     {editingPackage ? 'Update Package' : 'Create Package'}
                   </motion.button>

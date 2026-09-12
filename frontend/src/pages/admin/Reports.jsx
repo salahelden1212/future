@@ -192,8 +192,8 @@ const Reports = () => {
                   <FaArrowUp className="text-xs" /> Active transactions
                 </p>
               </div>
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500/20 to-yellow-500/10 flex items-center justify-center">
-                <FaMoneyBillWave className="text-2xl text-amber-400" />
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-brand-500/10 to-brand-500/10 flex items-center justify-center">
+                <FaMoneyBillWave className="text-2xl text-brand-400" />
               </div>
             </div>
           </motion.div>
@@ -207,7 +207,7 @@ const Reports = () => {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-gray-400 text-sm font-medium">Total Amount</p>
-                <p className="text-3xl font-bold bg-gradient-to-r from-amber-400 to-yellow-300 bg-clip-text text-transparent mt-2">
+                <p className="text-3xl font-bold bg-gradient-to-r from-brand-400 to-brand-300 bg-clip-text text-transparent mt-2">
                   {reportsData.totalAmount.toLocaleString()} EGP
                 </p>
                 <p className="text-gray-500 text-sm mt-1">Revenue collected</p>
@@ -249,8 +249,8 @@ const Reports = () => {
             className="bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-xl rounded-2xl p-6 border border-gray-700/50"
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500/20 to-yellow-500/10 flex items-center justify-center">
-                <FaChartLine className="text-amber-400" />
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/10 to-brand-500/10 flex items-center justify-center">
+                <FaChartLine className="text-brand-400" />
               </div>
               <h3 className="text-xl font-bold text-white">Monthly Payments Trend</h3>
             </div>
@@ -405,12 +405,12 @@ const Reports = () => {
             className="bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-xl rounded-2xl p-6 border border-gray-700/50"
           >
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500/20 to-yellow-500/10 flex items-center justify-center">
-                <FaCoins className="text-amber-400" />
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/10 to-brand-500/10 flex items-center justify-center">
+                <FaCoins className="text-brand-400" />
               </div>
               <p className="text-gray-400 text-sm font-medium">Total Revenue</p>
             </div>
-            <p className="text-2xl font-bold bg-gradient-to-r from-amber-400 to-yellow-300 bg-clip-text text-transparent">
+            <p className="text-2xl font-bold bg-gradient-to-r from-brand-400 to-brand-300 bg-clip-text text-transparent">
               {reportsData.totalRevenue.toLocaleString()} EGP
             </p>
           </motion.div>
@@ -475,8 +475,8 @@ const Reports = () => {
           className="bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-xl rounded-2xl p-6 border border-gray-700/50"
         >
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500/20 to-yellow-500/10 flex items-center justify-center">
-              <FaChartBar className="text-amber-400" />
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/10 to-brand-500/10 flex items-center justify-center">
+              <FaChartBar className="text-brand-400" />
             </div>
             <h3 className="text-xl font-bold text-white">Monthly Profit Analysis</h3>
           </div>
@@ -515,13 +515,13 @@ const Reports = () => {
             <div>
               <p className="text-gray-400 text-sm font-medium">Total Clients</p>
               <p className="text-4xl font-bold text-white mt-2">{reportsData.count}</p>
-              <p className="text-amber-400 text-sm mt-2 flex items-center gap-2">
-                <FaUsers className="text-amber-400" />
+              <p className="text-brand-400 text-sm mt-2 flex items-center gap-2">
+                <FaUsers className="text-brand-400" />
                 Active client accounts
               </p>
             </div>
-            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-500/20 to-yellow-500/10 flex items-center justify-center">
-              <FaUsers className="text-3xl text-amber-400" />
+            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-brand-500/10 to-brand-500/10 flex items-center justify-center">
+              <FaUsers className="text-3xl text-brand-400" />
             </div>
           </div>
         </motion.div>
@@ -535,8 +535,8 @@ const Reports = () => {
         >
           <div className="p-6 border-b border-gray-700/50">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500/20 to-yellow-500/10 flex items-center justify-center">
-                <FaUsers className="text-amber-400" />
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/10 to-brand-500/10 flex items-center justify-center">
+                <FaUsers className="text-brand-400" />
               </div>
               <h3 className="text-xl font-bold text-white">Top Clients</h3>
             </div>
@@ -563,8 +563,8 @@ const Reports = () => {
                   >
                     <td className="px-6 py-4">
                       <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500/20 to-yellow-500/10 flex items-center justify-center">
-                          <span className="text-amber-400 font-bold">{item.client.name.charAt(0)}</span>
+                        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/10 to-brand-500/10 flex items-center justify-center">
+                          <span className="text-brand-400 font-bold">{item.client.name.charAt(0)}</span>
                         </div>
                         <div>
                           <p className="text-white font-medium">{item.client.name}</p>
@@ -573,7 +573,7 @@ const Reports = () => {
                       </div>
                     </td>
                     <td className="px-6 py-4 text-center">
-                      <span className="bg-amber-500/20 text-amber-400 px-4 py-2 rounded-lg text-sm font-bold border border-amber-500/30">
+                      <span className="bg-brand-500/20 text-brand-400 px-4 py-2 rounded-lg text-sm font-bold border border-brand-500/30">
                         {item.propertiesCount}
                       </span>
                     </td>
@@ -596,11 +596,11 @@ const Reports = () => {
       <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
         <div>
           <div className="flex items-center gap-4 mb-2">
-            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500 to-yellow-400 flex items-center justify-center shadow-lg shadow-amber-500/20">
+            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-brand-500 to-brand-400 flex items-center justify-center shadow-lg shadow-brand-500/20">
               <FaChartBar className="text-2xl text-gray-900" />
             </div>
             <div>
-              <h1 className="text-4xl font-bold bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 bg-clip-text text-transparent">
+              <h1 className="text-4xl font-bold bg-gradient-to-r from-brand-400 via-brand-300 to-brand-500 bg-clip-text text-transparent">
                 Financial Reports
               </h1>
               <p className="text-gray-400 mt-1">Generate and export detailed financial analytics</p>
@@ -640,8 +640,8 @@ const Reports = () => {
         className="bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-xl rounded-2xl p-6 border border-gray-700/50"
       >
         <div className="flex items-center gap-3 mb-6">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500/20 to-yellow-500/10 flex items-center justify-center">
-            <FaChartPie className="text-amber-400" />
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/10 to-brand-500/10 flex items-center justify-center">
+            <FaChartPie className="text-brand-400" />
           </div>
           <h2 className="text-xl font-bold text-white">Report Configuration</h2>
         </div>
@@ -649,14 +649,14 @@ const Reports = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div>
             <label className="block text-gray-300 mb-2 text-sm font-medium flex items-center gap-2">
-              <FaChartLine className="text-amber-400" />
+              <FaChartLine className="text-brand-400" />
               Report Type
             </label>
             <div className="relative">
               <select
                 value={reportType}
                 onChange={(e) => setReportType(e.target.value)}
-                className="w-full px-4 py-3.5 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:ring-2 focus:ring-amber-500/20 focus:outline-none text-white appearance-none cursor-pointer transition-all duration-300"
+                className="w-full px-4 py-3.5 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:ring-2 focus:ring-brand-500/20 focus:outline-none text-white appearance-none cursor-pointer transition-all duration-300"
               >
                 <option value="payments">💰 Payments Report</option>
                 <option value="overdue">⚠️ Overdue Report</option>
@@ -673,27 +673,27 @@ const Reports = () => {
           
           <div>
             <label className="block text-gray-300 mb-2 text-sm font-medium flex items-center gap-2">
-              <FaCalendarAlt className="text-amber-400" />
+              <FaCalendarAlt className="text-brand-400" />
               Start Date
             </label>
             <input
               type="date"
               value={startDate}
               onChange={(e) => setStartDate(e.target.value)}
-              className="w-full px-4 py-3.5 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:ring-2 focus:ring-amber-500/20 focus:outline-none text-white transition-all duration-300"
+              className="w-full px-4 py-3.5 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:ring-2 focus:ring-brand-500/20 focus:outline-none text-white transition-all duration-300"
             />
           </div>
           
           <div>
             <label className="block text-gray-300 mb-2 text-sm font-medium flex items-center gap-2">
-              <FaCalendarAlt className="text-amber-400" />
+              <FaCalendarAlt className="text-brand-400" />
               End Date
             </label>
             <input
               type="date"
               value={endDate}
               onChange={(e) => setEndDate(e.target.value)}
-              className="w-full px-4 py-3.5 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:ring-2 focus:ring-amber-500/20 focus:outline-none text-white transition-all duration-300"
+              className="w-full px-4 py-3.5 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:ring-2 focus:ring-brand-500/20 focus:outline-none text-white transition-all duration-300"
             />
           </div>
         </div>
@@ -709,7 +709,7 @@ const Reports = () => {
             className="flex flex-col items-center justify-center py-20"
           >
             <div className="relative">
-              <div className="w-16 h-16 rounded-full border-4 border-gray-700 border-t-amber-500 animate-spin"></div>
+              <div className="w-16 h-16 rounded-full border-4 border-gray-700 border-t-brand-500 animate-spin"></div>
               <div className="absolute inset-0 w-16 h-16 rounded-full border-4 border-transparent border-b-yellow-400 animate-spin" style={{ animationDirection: 'reverse', animationDuration: '1.5s' }}></div>
             </div>
             <p className="text-gray-400 mt-4">Loading report data...</p>

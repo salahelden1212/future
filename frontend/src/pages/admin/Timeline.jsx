@@ -248,11 +248,11 @@ export default function Timeline() {
         {/* Header */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
           <div className="flex items-center gap-4">
-            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500 to-yellow-400 flex items-center justify-center shadow-lg shadow-amber-500/20">
+            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-brand-500 to-brand-400 flex items-center justify-center shadow-lg shadow-brand-500/20">
               <FaCalendar className="text-2xl text-gray-900" />
             </div>
             <div>
-              <h1 className="text-4xl font-bold bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 bg-clip-text text-transparent">
+              <h1 className="text-4xl font-bold bg-gradient-to-r from-brand-400 via-brand-300 to-brand-500 bg-clip-text text-transparent">
                 التقويم والجدول الزمني
               </h1>
               <p className="text-gray-400 mt-1">إدارة المهام والأحداث المهمة للمشاريع</p>
@@ -298,7 +298,7 @@ export default function Timeline() {
               onClick={() => setView('calendar')}
               className={`flex items-center gap-2 px-5 py-3 rounded-xl font-semibold transition-all duration-300 ${
                 view === 'calendar' 
-                  ? 'bg-gradient-to-r from-amber-500 to-yellow-400 text-gray-900 shadow-lg shadow-amber-500/20' 
+                  ? 'bg-gradient-to-r from-brand-500 to-brand-400 text-gray-900 shadow-lg shadow-brand-500/20' 
                   : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600/50'
               }`}
             >
@@ -310,7 +310,7 @@ export default function Timeline() {
               onClick={() => setView('gantt')}
               className={`flex items-center gap-2 px-5 py-3 rounded-xl font-semibold transition-all duration-300 ${
                 view === 'gantt' 
-                  ? 'bg-gradient-to-r from-amber-500 to-yellow-400 text-gray-900 shadow-lg shadow-amber-500/20' 
+                  ? 'bg-gradient-to-r from-brand-500 to-brand-400 text-gray-900 shadow-lg shadow-brand-500/20' 
                   : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600/50'
               }`}
             >
@@ -331,7 +331,7 @@ export default function Timeline() {
                     onClick={() => setGanttViewMode(mode)}
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                       ganttViewMode === mode 
-                        ? 'bg-amber-500/20 text-amber-400 border border-amber-500/30' 
+                        ? 'bg-brand-500/20 text-brand-400 border border-brand-500/30' 
                         : 'bg-gray-800/50 text-gray-400 hover:bg-gray-700/50 border border-gray-700/50'
                     }`}
                   >
@@ -346,7 +346,7 @@ export default function Timeline() {
         {loading ? (
           <div className="flex flex-col items-center justify-center py-20">
             <div className="relative">
-              <div className="w-16 h-16 rounded-full border-4 border-gray-700 border-t-amber-500 animate-spin"></div>
+              <div className="w-16 h-16 rounded-full border-4 border-gray-700 border-t-brand-500 animate-spin"></div>
               <div className="absolute inset-0 w-16 h-16 rounded-full border-4 border-transparent border-b-yellow-400 animate-spin" style={{ animationDirection: 'reverse', animationDuration: '1.5s' }}></div>
             </div>
             <p className="text-gray-400 mt-4">جاري التحميل...</p>
@@ -762,7 +762,7 @@ function TaskModal({ task, properties, onClose, onSave, onDelete }) {
         <form onSubmit={handleSubmit} className="p-8 space-y-5 max-h-[calc(90vh-80px)] overflow-y-auto">
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-2 flex items-center gap-2">
-              <FaBuilding className="text-amber-400" /> المشروع
+              <FaBuilding className="text-brand-400" /> المشروع
             </label>
             <select
               value={formData.property}
@@ -781,7 +781,7 @@ function TaskModal({ task, properties, onClose, onSave, onDelete }) {
 
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-2 flex items-center gap-2">
-              <FaTasks className="text-amber-400" /> عنوان المهمة
+              <FaTasks className="text-brand-400" /> عنوان المهمة
             </label>
             <input
               type="text"
@@ -805,7 +805,7 @@ function TaskModal({ task, properties, onClose, onSave, onDelete }) {
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2 flex items-center gap-2">
-                <FaCalendar className="text-amber-400" /> تاريخ البدء
+                <FaCalendar className="text-brand-400" /> تاريخ البدء
               </label>
               <input
                 type="date"
@@ -817,7 +817,7 @@ function TaskModal({ task, properties, onClose, onSave, onDelete }) {
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2 flex items-center gap-2">
-                <FaCalendar className="text-amber-400" /> تاريخ الانتهاء
+                <FaCalendar className="text-brand-400" /> تاريخ الانتهاء
               </label>
               <input
                 type="date"
@@ -861,7 +861,7 @@ function TaskModal({ task, properties, onClose, onSave, onDelete }) {
 
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-3">
-              نسبة الإنجاز: <span className="text-amber-400 font-bold">{formData.progress}%</span>
+              نسبة الإنجاز: <span className="text-brand-400 font-bold">{formData.progress}%</span>
             </label>
             <div className="relative">
               <input
@@ -870,10 +870,10 @@ function TaskModal({ task, properties, onClose, onSave, onDelete }) {
                 max="100"
                 value={formData.progress}
                 onChange={(e) => setFormData({ ...formData, progress: parseInt(e.target.value) })}
-                className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-amber-500"
+                className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-brand-500"
               />
               <div 
-                className="absolute top-0 left-0 h-2 bg-gradient-to-r from-amber-500 to-yellow-400 rounded-lg pointer-events-none"
+                className="absolute top-0 left-0 h-2 bg-gradient-to-r from-brand-500 to-brand-400 rounded-lg pointer-events-none"
                 style={{ width: `${formData.progress}%` }}
               ></div>
             </div>
@@ -999,7 +999,7 @@ function MilestoneModal({ milestone, properties, onClose, onSave, onDelete, onTo
         <form onSubmit={handleSubmit} className="p-8 space-y-5 max-h-[calc(90vh-80px)] overflow-y-auto">
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-2 flex items-center gap-2">
-              <FaBuilding className="text-amber-400" /> المشروع
+              <FaBuilding className="text-brand-400" /> المشروع
             </label>
             <select
               value={formData.property}
@@ -1018,7 +1018,7 @@ function MilestoneModal({ milestone, properties, onClose, onSave, onDelete, onTo
 
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-2 flex items-center gap-2">
-              <FaFlag className="text-amber-400" /> عنوان الحدث
+              <FaFlag className="text-brand-400" /> عنوان الحدث
             </label>
             <input
               type="text"
@@ -1032,7 +1032,7 @@ function MilestoneModal({ milestone, properties, onClose, onSave, onDelete, onTo
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-300 mb-2 flex items-center gap-2">
-                <FaCalendar className="text-amber-400" /> التاريخ
+                <FaCalendar className="text-brand-400" /> التاريخ
               </label>
               <input
                 type="date"
@@ -1060,7 +1060,7 @@ function MilestoneModal({ milestone, properties, onClose, onSave, onDelete, onTo
 
           <div>
             <label className="block text-sm font-medium text-gray-300 mb-2 flex items-center gap-2">
-              <FaClock className="text-amber-400" /> التذكير قبل (بالأيام)
+              <FaClock className="text-brand-400" /> التذكير قبل (بالأيام)
             </label>
             <input
               type="number"

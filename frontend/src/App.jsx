@@ -14,7 +14,7 @@ const PageLoader = () => (
   <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100">
     <div className="text-center">
       <div className="relative">
-        <div className="w-16 h-16 border-4 border-amber-200 rounded-full animate-spin border-t-amber-500 mx-auto"></div>
+        <div className="w-16 h-16 border-4 border-brand-200 rounded-full animate-spin border-t-brand-500 mx-auto"></div>
         <div className="w-12 h-12 border-4 border-gray-200 rounded-full animate-spin border-t-gray-500 mx-auto absolute top-2 left-1/2 -translate-x-1/2" style={{ animationDirection: 'reverse', animationDuration: '0.8s' }}></div>
       </div>
       <p className="mt-4 text-gray-600 font-medium">جاري التحميل...</p>

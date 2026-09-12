@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaBars, FaTimes, FaGlobe } from 'react-icons/fa';
 
-// Logo paths from public folder
 const logoIcon = '/images/logo-icon.png';
 const logoDark = '/images/logo-dark.png';
 
@@ -15,9 +14,7 @@ const Navbar = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -39,30 +36,30 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-500 ${
-        scrolled 
-          ? 'bg-gray-900/95 backdrop-blur-xl shadow-xl shadow-black/20 border-b border-gray-800/50' 
-          : 'bg-gradient-to-b from-gray-900/80 to-transparent'
+        scrolled
+          ? 'bg-surface-100/80 backdrop-blur-2xl border-b border-white/5 shadow-lg shadow-black/20'
+          : 'bg-transparent'
       }`}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center h-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-18">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <img 
-              src={logoDark} 
-              alt="Future Finish" 
-              className="h-12 md:h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+            <img
+              src={logoDark}
+              alt="Future Finish"
+              className="h-10 md:h-12 w-auto object-contain"
               onError={(e) => {
                 e.target.onerror = null;
                 e.target.src = logoIcon;
               }}
             />
             <div className="hidden sm:block">
-              <h1 className="text-xl md:text-2xl font-black tracking-wide">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500">FUTURE</span>
-                <span className="text-white ml-1">FINISH</span>
+              <h1 className="text-lg md:text-xl font-bold tracking-tight">
+                <span className="text-gradient-brand">FUTURE</span>
+                <span className="text-white/90 ml-1.5">FINISH</span>
               </h1>
-              <p className="text-[10px] text-gray-400 tracking-[0.2em] uppercase">Finishing at the highest level</p>
+              <p className="text-[9px] text-muted-light tracking-[0.25em] uppercase">Premium Finishing</p>
             </div>
           </Link>
 
@@ -74,30 +71,30 @@ const Navbar = () => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`relative px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-                    isActive 
-                      ? 'text-amber-400' 
-                      : 'text-gray-300 hover:text-white'
+                  className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 ${
+                    isActive
+                      ? 'text-brand-400 bg-brand-500/10'
+                      : 'text-muted-light hover:text-white hover:bg-white/5'
                   }`}
                 >
                   {link.label}
                   {isActive && (
                     <motion.div
                       layoutId="activeNav"
-                      className="absolute bottom-0 left-2 right-2 h-0.5 bg-gradient-to-r from-amber-400 to-yellow-300 rounded-full"
+                      className="absolute bottom-0 left-3 right-3 h-0.5 bg-gradient-to-r from-brand-500 to-accent-cyan rounded-full"
                       transition={{ type: 'spring', stiffness: 300, damping: 30 }}
                     />
                   )}
                 </Link>
               );
             })}
-            
+
             {/* Language Toggle */}
             <button
               onClick={toggleLanguage}
-              className="flex items-center gap-2 ml-4 px-4 py-2 rounded-xl bg-gray-800/50 hover:bg-gray-700/50 border border-gray-700/50 hover:border-amber-500/30 text-gray-300 hover:text-amber-400 transition-all duration-300"
+              className="flex items-center gap-2 ml-3 px-3.5 py-2 rounded-lg bg-white/5 hover:bg-brand-500/10 border border-white/10 hover:border-brand-500/30 text-muted-light hover:text-brand-400 transition-all duration-300 text-sm"
             >
-              <FaGlobe className="text-lg" />
+              <FaGlobe className="text-sm" />
               <span className="font-medium">{i18n.language === 'ar' ? 'EN' : 'عربي'}</span>
             </button>
           </div>
@@ -105,28 +102,16 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden relative w-10 h-10 rounded-xl bg-gray-800/50 border border-gray-700/50 flex items-center justify-center text-white hover:text-amber-400 hover:border-amber-500/30 transition-all duration-300"
+            className="md:hidden relative w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-muted-light hover:text-brand-400 hover:border-brand-500/30 transition-all duration-300"
           >
             <AnimatePresence mode="wait">
               {isOpen ? (
-                <motion.div
-                  key="close"
-                  initial={{ rotate: -90, opacity: 0 }}
-                  animate={{ rotate: 0, opacity: 1 }}
-                  exit={{ rotate: 90, opacity: 0 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <FaTimes className="text-xl" />
+                <motion.div key="close" initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 90, opacity: 0 }} transition={{ duration: 0.2 }}>
+                  <FaTimes className="text-lg" />
                 </motion.div>
               ) : (
-                <motion.div
-                  key="menu"
-                  initial={{ rotate: 90, opacity: 0 }}
-                  animate={{ rotate: 0, opacity: 1 }}
-                  exit={{ rotate: -90, opacity: 0 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <FaBars className="text-xl" />
+                <motion.div key="menu" initial={{ rotate: 90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: -90, opacity: 0 }} transition={{ duration: 0.2 }}>
+                  <FaBars className="text-lg" />
                 </motion.div>
               )}
             </AnimatePresence>
@@ -143,8 +128,8 @@ const Navbar = () => {
               transition={{ duration: 0.3 }}
               className="md:hidden overflow-hidden"
             >
-              <div className="bg-gray-800/95 backdrop-blur-xl rounded-2xl border border-gray-700/50 p-4 mb-4 shadow-xl">
-                <div className="flex flex-col gap-2">
+              <div className="glass-strong rounded-2xl p-4 mb-4">
+                <div className="flex flex-col gap-1">
                   {navLinks.map((link, index) => {
                     const isActive = location.pathname === link.path;
                     return (
@@ -157,10 +142,10 @@ const Navbar = () => {
                         <Link
                           to={link.path}
                           onClick={() => setIsOpen(false)}
-                          className={`block px-4 py-3 rounded-xl font-medium transition-all duration-300 ${
-                            isActive 
-                              ? 'bg-gradient-to-r from-amber-500/20 to-yellow-500/20 text-amber-400 border border-amber-500/30' 
-                              : 'text-gray-300 hover:text-white hover:bg-gray-700/50'
+                          className={`block px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 ${
+                            isActive
+                              ? 'bg-brand-500/15 text-brand-400 border border-brand-500/20'
+                              : 'text-muted-light hover:text-white hover:bg-white/5'
                           }`}
                         >
                           {link.label}
@@ -168,7 +153,7 @@ const Navbar = () => {
                       </motion.div>
                     );
                   })}
-                  
+
                   <motion.div
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -176,9 +161,9 @@ const Navbar = () => {
                   >
                     <button
                       onClick={toggleLanguage}
-                      className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-gray-700/50 hover:bg-gray-600/50 text-gray-300 hover:text-amber-400 transition-all duration-300 mt-2 border border-gray-600/50"
+                      className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-white/5 hover:bg-brand-500/10 text-muted-light hover:text-brand-400 transition-all duration-300 mt-2 border border-white/10 text-sm"
                     >
-                      <FaGlobe className="text-lg" />
+                      <FaGlobe />
                       <span className="font-medium">{i18n.language === 'ar' ? 'English' : 'العربية'}</span>
                     </button>
                   </motion.div>

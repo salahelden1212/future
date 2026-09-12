@@ -213,7 +213,7 @@ const UsersManagement = () => {
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
-            Users <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-300">Management</span>
+            Users <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-300">Management</span>
           </h1>
           <p className="text-gray-400">Manage admin users and permissions</p>
         </div>
@@ -221,7 +221,7 @@ const UsersManagement = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => setShowModal(true)}
-          className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-amber-500 to-yellow-400 text-gray-900 rounded-xl font-semibold shadow-lg shadow-amber-500/20 hover:shadow-amber-500/40 transition-all"
+          className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-brand-500 to-brand-400 text-gray-900 rounded-xl font-semibold shadow-lg shadow-brand-500/20 hover:shadow-brand-500/40 transition-all"
         >
           <FaPlus />
           <span>Add User</span>
@@ -231,7 +231,7 @@ const UsersManagement = () => {
       {/* Stats Cards */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {[
-          { label: 'Total Users', value: users.length, gradient: 'from-amber-500 to-yellow-500', icon: FaUser },
+          { label: 'Total Users', value: users.length, gradient: 'from-brand-500 to-brand-500', icon: FaUser },
           { label: 'Super Admins', value: users.filter(u => u.role === 'super-admin').length, gradient: 'from-red-500 to-pink-500', icon: FaUserShield },
           { label: 'Admins', value: users.filter(u => u.role === 'admin').length, gradient: 'from-blue-500 to-cyan-500', icon: FaUserTie },
           { label: 'Active', value: users.filter(u => u.isActive).length, gradient: 'from-green-500 to-emerald-500', icon: FaCheckCircle },
@@ -259,7 +259,7 @@ const UsersManagement = () => {
         <div className="flex items-center justify-center h-64">
           <div className="text-center">
             <div className="relative">
-              <div className="w-16 h-16 border-4 border-amber-200 rounded-full animate-spin border-t-amber-500 mx-auto"></div>
+              <div className="w-16 h-16 border-4 border-brand-200 rounded-full animate-spin border-t-brand-500 mx-auto"></div>
               <div className="w-10 h-10 border-4 border-gray-200 rounded-full animate-spin border-t-gray-500 mx-auto absolute top-3 left-1/2 -translate-x-1/2" style={{ animationDirection: 'reverse' }}></div>
             </div>
             <p className="mt-4 text-gray-400">Loading users...</p>
@@ -415,7 +415,7 @@ const UsersManagement = () => {
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white transition-all"
+                      className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white transition-all"
                       placeholder="Ahmed Ali"
                     />
                   </div>
@@ -430,7 +430,7 @@ const UsersManagement = () => {
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white transition-all"
+                      className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white transition-all"
                       placeholder="ahmed@example.com"
                     />
                   </div>
@@ -447,7 +447,7 @@ const UsersManagement = () => {
                         minLength="6"
                         value={formData.password}
                         onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-                        className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white transition-all"
+                        className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white transition-all"
                         placeholder="Min 6 characters"
                       />
                     </div>
@@ -459,7 +459,7 @@ const UsersManagement = () => {
                   <select
                     value={formData.role}
                     onChange={(e) => setFormData({ ...formData, role: e.target.value })}
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none text-white cursor-pointer"
+                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none text-white cursor-pointer"
                   >
                     <option value="viewer">Viewer</option>
                     <option value="admin">Admin</option>
@@ -482,7 +482,7 @@ const UsersManagement = () => {
                               ...formData,
                               permissions: { ...formData.permissions, [key]: e.target.checked }
                             })}
-                            className="w-5 h-5 rounded border-gray-600 bg-gray-700 text-amber-500 focus:ring-amber-500 focus:ring-offset-gray-800"
+                            className="w-5 h-5 rounded border-gray-600 bg-gray-700 text-brand-500 focus:ring-brand-500 focus:ring-offset-gray-800"
                           />
                           <span className="text-gray-300 capitalize">{key}</span>
                         </label>
@@ -496,7 +496,7 @@ const UsersManagement = () => {
                     type="submit"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="flex-1 py-3 bg-gradient-to-r from-amber-500 to-yellow-400 text-gray-900 rounded-xl font-bold shadow-lg shadow-amber-500/20 hover:shadow-amber-500/40 transition-all"
+                    className="flex-1 py-3 bg-gradient-to-r from-brand-500 to-brand-400 text-gray-900 rounded-xl font-bold shadow-lg shadow-brand-500/20 hover:shadow-brand-500/40 transition-all"
                   >
                     {editingUser ? 'Update User' : 'Create User'}
                   </motion.button>
@@ -554,7 +554,7 @@ const UsersManagement = () => {
                       minLength="6"
                       value={passwordData.newPassword}
                       onChange={(e) => setPasswordData({ ...passwordData, newPassword: e.target.value })}
-                      className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white transition-all"
+                      className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white transition-all"
                       placeholder="Min 6 characters"
                     />
                   </div>
@@ -570,7 +570,7 @@ const UsersManagement = () => {
                       minLength="6"
                       value={passwordData.confirmPassword}
                       onChange={(e) => setPasswordData({ ...passwordData, confirmPassword: e.target.value })}
-                      className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white transition-all"
+                      className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white transition-all"
                       placeholder="Confirm new password"
                     />
                   </div>
@@ -581,7 +581,7 @@ const UsersManagement = () => {
                     type="submit"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="flex-1 py-3 bg-gradient-to-r from-amber-500 to-yellow-400 text-gray-900 rounded-xl font-bold shadow-lg shadow-amber-500/20 hover:shadow-amber-500/40 transition-all"
+                    className="flex-1 py-3 bg-gradient-to-r from-brand-500 to-brand-400 text-gray-900 rounded-xl font-bold shadow-lg shadow-brand-500/20 hover:shadow-brand-500/40 transition-all"
                   >
                     Change Password
                   </motion.button>

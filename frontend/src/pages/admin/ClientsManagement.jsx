@@ -123,7 +123,7 @@ const ClientsManagement = () => {
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
-            Clients <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-300">Management</span>
+            Clients <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-300">Management</span>
           </h1>
           <p className="text-gray-400">Manage your client relationships (CRM)</p>
         </div>
@@ -131,7 +131,7 @@ const ClientsManagement = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => setShowModal(true)}
-          className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-amber-500 to-yellow-400 text-gray-900 rounded-xl font-semibold shadow-lg shadow-amber-500/20 hover:shadow-amber-500/40 transition-all"
+          className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-brand-500 to-brand-400 text-gray-900 rounded-xl font-semibold shadow-lg shadow-brand-500/20 hover:shadow-brand-500/40 transition-all"
         >
           <FaPlus /> Add Client
         </motion.button>
@@ -147,7 +147,7 @@ const ClientsManagement = () => {
               placeholder="Search by name, phone, or email..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white transition-all"
+              className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white transition-all"
             />
           </div>
           <div className="relative">
@@ -155,7 +155,7 @@ const ClientsManagement = () => {
             <select
               value={statusFilter}
               onChange={(e) => setStatusFilter(e.target.value)}
-              className="pl-12 pr-8 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none text-white appearance-none cursor-pointer min-w-[160px]"
+              className="pl-12 pr-8 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none text-white appearance-none cursor-pointer min-w-[160px]"
             >
               <option value="all">All Status</option>
               <option value="active">Active</option>
@@ -169,7 +169,7 @@ const ClientsManagement = () => {
       {/* Stats Summary */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {[
-          { label: 'Total', value: clients.length, color: 'from-amber-500 to-yellow-500' },
+          { label: 'Total', value: clients.length, color: 'from-brand-500 to-brand-500' },
           { label: 'Active', value: clients.filter(c => c.status === 'active').length, color: 'from-green-500 to-emerald-500' },
           { label: 'Potential', value: clients.filter(c => c.status === 'potential').length, color: 'from-blue-500 to-cyan-500' },
           { label: 'Inactive', value: clients.filter(c => c.status === 'inactive').length, color: 'from-gray-500 to-gray-600' },
@@ -191,7 +191,7 @@ const ClientsManagement = () => {
         <div className="flex items-center justify-center h-64">
           <div className="text-center">
             <div className="relative">
-              <div className="w-16 h-16 border-4 border-amber-200 rounded-full animate-spin border-t-amber-500 mx-auto"></div>
+              <div className="w-16 h-16 border-4 border-brand-200 rounded-full animate-spin border-t-brand-500 mx-auto"></div>
               <div className="w-10 h-10 border-4 border-gray-200 rounded-full animate-spin border-t-gray-500 mx-auto absolute top-3 left-1/2 -translate-x-1/2" style={{ animationDirection: 'reverse' }}></div>
             </div>
             <p className="mt-4 text-gray-400">Loading clients...</p>
@@ -218,7 +218,7 @@ const ClientsManagement = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.05 }}
-              className="group bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-xl rounded-2xl p-6 border border-gray-700/50 hover:border-amber-500/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-amber-500/10"
+              className="group bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-xl rounded-2xl p-6 border border-gray-700/50 hover:border-brand-500/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-500/10"
             >
               <div className="flex justify-between items-start mb-4">
                 <div className="flex items-center gap-4">
@@ -226,7 +226,7 @@ const ClientsManagement = () => {
                     {client.name.charAt(0).toUpperCase()}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white group-hover:text-amber-400 transition-colors">{client.name}</h3>
+                    <h3 className="text-xl font-bold text-white group-hover:text-brand-400 transition-colors">{client.name}</h3>
                     <span className={`px-3 py-1 rounded-full text-xs font-medium border ${getStatusColor(client.status)}`}>
                       {client.status}
                     </span>
@@ -251,8 +251,8 @@ const ClientsManagement = () => {
                 )}
                 {client.address && (
                   <div className="flex items-center gap-3 text-gray-300">
-                    <div className="w-8 h-8 rounded-lg bg-amber-500/20 flex items-center justify-center">
-                      <FaMapMarkerAlt className="text-amber-400 text-sm" />
+                    <div className="w-8 h-8 rounded-lg bg-brand-500/20 flex items-center justify-center">
+                      <FaMapMarkerAlt className="text-brand-400 text-sm" />
                     </div>
                     <span className="truncate">{client.address}</span>
                   </div>
@@ -325,7 +325,7 @@ const ClientsManagement = () => {
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white transition-all"
+                      className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white transition-all"
                       placeholder="Ahmed Mohammed"
                     />
                   </div>
@@ -341,7 +341,7 @@ const ClientsManagement = () => {
                         required
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white transition-all"
+                        className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white transition-all"
                         placeholder="+20 100 000 0000"
                       />
                     </div>
@@ -354,7 +354,7 @@ const ClientsManagement = () => {
                         type="email"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white transition-all"
+                        className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white transition-all"
                         placeholder="client@email.com"
                       />
                     </div>
@@ -369,7 +369,7 @@ const ClientsManagement = () => {
                       type="text"
                       value={formData.address}
                       onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-                      className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white transition-all"
+                      className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white transition-all"
                       placeholder="Cairo, Egypt"
                     />
                   </div>
@@ -380,7 +380,7 @@ const ClientsManagement = () => {
                   <select
                     value={formData.status}
                     onChange={(e) => setFormData({ ...formData, status: e.target.value })}
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none text-white cursor-pointer"
+                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none text-white cursor-pointer"
                   >
                     <option value="active">Active</option>
                     <option value="potential">Potential</option>
@@ -394,7 +394,7 @@ const ClientsManagement = () => {
                     rows="4"
                     value={formData.notes}
                     onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white transition-all resize-none"
+                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white transition-all resize-none"
                     placeholder="Additional information about the client..."
                   />
                 </div>
@@ -404,7 +404,7 @@ const ClientsManagement = () => {
                     type="submit" 
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="flex-1 py-3 bg-gradient-to-r from-amber-500 to-yellow-400 text-gray-900 rounded-xl font-bold shadow-lg shadow-amber-500/20 hover:shadow-amber-500/40 transition-all"
+                    className="flex-1 py-3 bg-gradient-to-r from-brand-500 to-brand-400 text-gray-900 rounded-xl font-bold shadow-lg shadow-brand-500/20 hover:shadow-brand-500/40 transition-all"
                   >
                     {editingClient ? 'Update Client' : 'Create Client'}
                   </motion.button>

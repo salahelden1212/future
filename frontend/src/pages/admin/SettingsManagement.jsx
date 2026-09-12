@@ -81,7 +81,7 @@ const SettingsManagement = () => {
       <div className="flex items-center justify-center h-[60vh]">
         <div className="text-center">
           <div className="relative">
-            <div className="w-16 h-16 border-4 border-amber-200 rounded-full animate-spin border-t-amber-500 mx-auto"></div>
+            <div className="w-16 h-16 border-4 border-brand-200 rounded-full animate-spin border-t-brand-500 mx-auto"></div>
             <div className="w-10 h-10 border-4 border-gray-200 rounded-full animate-spin border-t-gray-500 mx-auto absolute top-3 left-1/2 -translate-x-1/2" style={{ animationDirection: 'reverse' }}></div>
           </div>
           <p className="mt-4 text-gray-400">Loading settings...</p>
@@ -96,7 +96,7 @@ const SettingsManagement = () => {
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
-            Site <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-300">Settings</span>
+            Site <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-300">Settings</span>
           </h1>
           <p className="text-gray-400">Manage company contact information and settings</p>
         </div>
@@ -106,7 +106,7 @@ const SettingsManagement = () => {
           disabled={saving}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-amber-500 to-yellow-400 text-gray-900 rounded-xl font-semibold shadow-lg shadow-amber-500/20 hover:shadow-amber-500/40 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+          className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-brand-500 to-brand-400 text-gray-900 rounded-xl font-semibold shadow-lg shadow-brand-500/20 hover:shadow-brand-500/40 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <FaSave />
           {saving ? 'Saving...' : 'Save Settings'}
@@ -139,7 +139,7 @@ const SettingsManagement = () => {
                 type="tel"
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white transition-all"
+                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white transition-all"
                 placeholder="+20 100 000 0000"
               />
             </div>
@@ -152,7 +152,7 @@ const SettingsManagement = () => {
                 type="email"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white transition-all"
+                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white transition-all"
                 placeholder="info@futurefinish.com"
               />
             </div>
@@ -165,7 +165,7 @@ const SettingsManagement = () => {
                 type="tel"
                 value={formData.whatsapp}
                 onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
-                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white transition-all"
+                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white transition-all"
                 placeholder="+201000000000"
               />
               <p className="text-xs text-gray-500 mt-1">Format: +201000000000 (no spaces)</p>
@@ -179,7 +179,7 @@ const SettingsManagement = () => {
                 type="text"
                 value={formData.address.en}
                 onChange={(e) => setFormData({ ...formData, address: { ...formData.address, en: e.target.value } })}
-                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white transition-all"
+                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white transition-all"
                 placeholder="Cairo, Egypt"
               />
             </div>
@@ -192,7 +192,7 @@ const SettingsManagement = () => {
                 type="text"
                 value={formData.address.ar}
                 onChange={(e) => setFormData({ ...formData, address: { ...formData.address, ar: e.target.value } })}
-                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white text-right transition-all"
+                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white text-right transition-all"
                 placeholder="القاهرة، مصر"
                 dir="rtl"
               />
@@ -234,7 +234,7 @@ const SettingsManagement = () => {
                   type="url"
                   value={formData.socialMedia[social.key] || ''}
                   onChange={(e) => setFormData({ ...formData, socialMedia: { ...formData.socialMedia, [social.key]: e.target.value } })}
-                  className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white transition-all"
+                  className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white transition-all"
                   placeholder={social.placeholder}
                 />
               </div>
@@ -250,7 +250,7 @@ const SettingsManagement = () => {
           className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-xl rounded-2xl p-8 border border-gray-700/50"
         >
           <div className="flex items-center gap-3 mb-8">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-yellow-500 flex items-center justify-center">
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-500 to-brand-500 flex items-center justify-center">
               <FaSearch className="text-white text-xl" />
             </div>
             <div>
@@ -263,7 +263,7 @@ const SettingsManagement = () => {
             {/* Title */}
             <div>
               <h3 className="text-lg font-medium text-white mb-4 flex items-center gap-2">
-                <FaCog className="text-amber-400" /> Meta Title
+                <FaCog className="text-brand-400" /> Meta Title
               </h3>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
@@ -272,7 +272,7 @@ const SettingsManagement = () => {
                     type="text"
                     value={formData.seo.title.en}
                     onChange={(e) => setFormData({ ...formData, seo: { ...formData.seo, title: { ...formData.seo.title, en: e.target.value } } })}
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white transition-all"
+                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white transition-all"
                     placeholder="Future Finish - Premium Finishing Services"
                   />
                 </div>
@@ -283,7 +283,7 @@ const SettingsManagement = () => {
                     type="text"
                     value={formData.seo.title.ar}
                     onChange={(e) => setFormData({ ...formData, seo: { ...formData.seo, title: { ...formData.seo.title, ar: e.target.value } } })}
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white text-right transition-all"
+                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white text-right transition-all"
                     placeholder="فيرتكس فينيش - خدمات تشطيب مميزة"
                     dir="rtl"
                   />
@@ -294,7 +294,7 @@ const SettingsManagement = () => {
             {/* Description */}
             <div>
               <h3 className="text-lg font-medium text-white mb-4 flex items-center gap-2">
-                <FaCog className="text-amber-400" /> Meta Description
+                <FaCog className="text-brand-400" /> Meta Description
               </h3>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
@@ -303,7 +303,7 @@ const SettingsManagement = () => {
                     rows="3"
                     value={formData.seo.description.en}
                     onChange={(e) => setFormData({ ...formData, seo: { ...formData.seo, description: { ...formData.seo.description, en: e.target.value } } })}
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white transition-all resize-none"
+                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white transition-all resize-none"
                     placeholder="Expert finishing services at the highest level..."
                   />
                 </div>
@@ -314,7 +314,7 @@ const SettingsManagement = () => {
                     rows="3"
                     value={formData.seo.description.ar}
                     onChange={(e) => setFormData({ ...formData, seo: { ...formData.seo, description: { ...formData.seo.description, ar: e.target.value } } })}
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white text-right transition-all resize-none"
+                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white text-right transition-all resize-none"
                     placeholder="خدمات تشطيب احترافية على أعلى مستوى..."
                     dir="rtl"
                   />
@@ -325,7 +325,7 @@ const SettingsManagement = () => {
             {/* Keywords */}
             <div>
               <h3 className="text-lg font-medium text-white mb-4 flex items-center gap-2">
-                <FaTags className="text-amber-400" /> Keywords
+                <FaTags className="text-brand-400" /> Keywords
               </h3>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
@@ -334,7 +334,7 @@ const SettingsManagement = () => {
                     type="text"
                     value={formData.seo.keywords.en}
                     onChange={(e) => setFormData({ ...formData, seo: { ...formData.seo, keywords: { ...formData.seo.keywords, en: e.target.value } } })}
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white transition-all"
+                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white transition-all"
                     placeholder="finishing, construction, interior, design"
                   />
                   <p className="text-xs text-gray-500 mt-2">Comma separated</p>
@@ -346,7 +346,7 @@ const SettingsManagement = () => {
                     type="text"
                     value={formData.seo.keywords.ar}
                     onChange={(e) => setFormData({ ...formData, seo: { ...formData.seo, keywords: { ...formData.seo.keywords, ar: e.target.value } } })}
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white text-right transition-all"
+                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white text-right transition-all"
                     placeholder="تشطيبات، بناء، ديكور، تصميم"
                     dir="rtl"
                   />
@@ -364,7 +364,7 @@ const SettingsManagement = () => {
             disabled={saving}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="w-14 h-14 bg-gradient-to-r from-amber-500 to-yellow-400 text-gray-900 rounded-full shadow-lg shadow-amber-500/30 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-14 h-14 bg-gradient-to-r from-brand-500 to-brand-400 text-gray-900 rounded-full shadow-lg shadow-brand-500/30 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <FaSave className="text-xl" />
           </motion.button>

@@ -175,7 +175,7 @@ const ProjectsManagement = () => {
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
-            Projects <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-300">Management</span>
+            Projects <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-300">Management</span>
           </h1>
           <p className="text-gray-400">Manage your portfolio and showcase projects</p>
         </div>
@@ -183,7 +183,7 @@ const ProjectsManagement = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => setShowModal(true)}
-          className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-amber-500 to-yellow-400 text-gray-900 rounded-xl font-semibold shadow-lg shadow-amber-500/20 hover:shadow-amber-500/40 transition-all"
+          className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-brand-500 to-brand-400 text-gray-900 rounded-xl font-semibold shadow-lg shadow-brand-500/20 hover:shadow-brand-500/40 transition-all"
         >
           <FaPlus />
           <span>Add Project</span>
@@ -193,7 +193,7 @@ const ProjectsManagement = () => {
       {/* Stats Cards */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {[
-          { label: 'Total Projects', value: projects.length, gradient: 'from-amber-500 to-yellow-500', icon: FaFolder },
+          { label: 'Total Projects', value: projects.length, gradient: 'from-brand-500 to-brand-500', icon: FaFolder },
           { label: 'Residential', value: projects.filter(p => p.category === 'residential').length, gradient: 'from-blue-500 to-cyan-500', icon: FaHome },
           { label: 'Commercial', value: projects.filter(p => p.category === 'commercial').length, gradient: 'from-green-500 to-emerald-500', icon: FaBuilding },
           { label: 'Featured', value: projects.filter(p => p.isFeatured).length, gradient: 'from-purple-500 to-pink-500', icon: FaStar },
@@ -226,7 +226,7 @@ const ProjectsManagement = () => {
             onClick={() => setCategoryFilter(cat)}
             className={`px-5 py-2.5 rounded-xl whitespace-nowrap transition-all font-medium ${
               categoryFilter === cat
-                ? 'bg-gradient-to-r from-amber-500 to-yellow-400 text-gray-900 shadow-lg shadow-amber-500/20'
+                ? 'bg-gradient-to-r from-brand-500 to-brand-400 text-gray-900 shadow-lg shadow-brand-500/20'
                 : 'bg-gray-800/60 text-gray-400 hover:bg-gray-700/60 border border-gray-700/50'
             }`}
           >
@@ -242,7 +242,7 @@ const ProjectsManagement = () => {
         <div className="flex items-center justify-center h-64">
           <div className="text-center">
             <div className="relative">
-              <div className="w-16 h-16 border-4 border-amber-200 rounded-full animate-spin border-t-amber-500 mx-auto"></div>
+              <div className="w-16 h-16 border-4 border-brand-200 rounded-full animate-spin border-t-brand-500 mx-auto"></div>
               <div className="w-10 h-10 border-4 border-gray-200 rounded-full animate-spin border-t-gray-500 mx-auto absolute top-3 left-1/2 -translate-x-1/2" style={{ animationDirection: 'reverse' }}></div>
             </div>
             <p className="mt-4 text-gray-400">Loading projects...</p>
@@ -264,7 +264,7 @@ const ProjectsManagement = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.05 }}
-              className="bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-xl rounded-2xl border border-gray-700/50 group hover:border-amber-500/30 transition-all overflow-hidden"
+              className="bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-xl rounded-2xl border border-gray-700/50 group hover:border-brand-500/30 transition-all overflow-hidden"
             >
               {/* Cover Image */}
               <div className="relative h-52 overflow-hidden">
@@ -281,7 +281,7 @@ const ProjectsManagement = () => {
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-80"></div>
                 {project.isFeatured && (
-                  <div className="absolute top-4 right-4 bg-gradient-to-r from-amber-500 to-yellow-400 px-3 py-1.5 rounded-lg flex items-center gap-1.5 text-gray-900 font-semibold text-sm shadow-lg">
+                  <div className="absolute top-4 right-4 bg-gradient-to-r from-brand-500 to-brand-400 px-3 py-1.5 rounded-lg flex items-center gap-1.5 text-gray-900 font-semibold text-sm shadow-lg">
                     <FaStar /> Featured
                   </div>
                 )}
@@ -300,7 +300,7 @@ const ProjectsManagement = () => {
 
                 {project.completionDate && (
                   <div className="flex items-center gap-2 text-gray-500 text-sm mb-4">
-                    <FaCalendar className="text-amber-500/50" />
+                    <FaCalendar className="text-brand-500/50" />
                     Completed: {new Date(project.completionDate).toLocaleDateString()}
                   </div>
                 )}
@@ -368,7 +368,7 @@ const ProjectsManagement = () => {
                       required
                       value={formData.title.en}
                       onChange={(e) => setFormData({ ...formData, title: { ...formData.title, en: e.target.value } })}
-                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white transition-all"
+                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white transition-all"
                       placeholder="Modern Villa Project"
                     />
                   </div>
@@ -379,7 +379,7 @@ const ProjectsManagement = () => {
                       required
                       value={formData.title.ar}
                       onChange={(e) => setFormData({ ...formData, title: { ...formData.title, ar: e.target.value } })}
-                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white text-right transition-all"
+                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white text-right transition-all"
                       placeholder="مشروع فيلا عصرية"
                       dir="rtl"
                     />
@@ -395,7 +395,7 @@ const ProjectsManagement = () => {
                       rows="3"
                       value={formData.description.en}
                       onChange={(e) => setFormData({ ...formData, description: { ...formData.description, en: e.target.value } })}
-                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white transition-all resize-none"
+                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white transition-all resize-none"
                       placeholder="Project details..."
                     />
                   </div>
@@ -406,7 +406,7 @@ const ProjectsManagement = () => {
                       rows="3"
                       value={formData.description.ar}
                       onChange={(e) => setFormData({ ...formData, description: { ...formData.description, ar: e.target.value } })}
-                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white text-right transition-all resize-none"
+                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white text-right transition-all resize-none"
                       placeholder="تفاصيل المشروع..."
                       dir="rtl"
                     />
@@ -420,7 +420,7 @@ const ProjectsManagement = () => {
                     <select
                       value={formData.category}
                       onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none text-white cursor-pointer"
+                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none text-white cursor-pointer"
                     >
                       <option value="residential">Residential</option>
                       <option value="commercial">Commercial</option>
@@ -433,7 +433,7 @@ const ProjectsManagement = () => {
                       type="date"
                       value={formData.completionDate}
                       onChange={(e) => setFormData({ ...formData, completionDate: e.target.value })}
-                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none text-white"
+                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none text-white"
                     />
                   </div>
                   <div className="flex items-end">
@@ -442,9 +442,9 @@ const ProjectsManagement = () => {
                         type="checkbox"
                         checked={formData.isFeatured}
                         onChange={(e) => setFormData({ ...formData, isFeatured: e.target.checked })}
-                        className="w-5 h-5 rounded border-gray-600 bg-gray-700 text-amber-500 focus:ring-amber-500 focus:ring-offset-gray-800"
+                        className="w-5 h-5 rounded border-gray-600 bg-gray-700 text-brand-500 focus:ring-brand-500 focus:ring-offset-gray-800"
                       />
-                      <span className="text-gray-300 flex items-center gap-2"><FaStar className="text-amber-500" /> Featured Project</span>
+                      <span className="text-gray-300 flex items-center gap-2"><FaStar className="text-brand-500" /> Featured Project</span>
                     </label>
                   </div>
                 </div>
@@ -497,7 +497,7 @@ const ProjectsManagement = () => {
                       {formData.images.map((image, index) => (
                         <div key={index} className="p-4 bg-gray-800/30 rounded-xl border border-gray-700/30">
                           <div className="flex items-center gap-2 mb-3">
-                            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-500 to-yellow-400 flex items-center justify-center">
+                            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-brand-400 flex items-center justify-center">
                               <FaImage className="text-gray-900 text-sm" />
                             </div>
                             <span className="text-sm text-gray-400">Image {index + 1}</span>
@@ -507,14 +507,14 @@ const ProjectsManagement = () => {
                               type="text"
                               value={image.caption.en}
                               onChange={(e) => updateImage(index, 'caption', e.target.value, 'en')}
-                              className="px-4 py-2.5 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none text-white text-sm transition-all"
+                              className="px-4 py-2.5 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none text-white text-sm transition-all"
                               placeholder="Caption (English)"
                             />
                             <input
                               type="text"
                               value={image.caption.ar}
                               onChange={(e) => updateImage(index, 'caption', e.target.value, 'ar')}
-                              className="px-4 py-2.5 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none text-white text-sm text-right transition-all"
+                              className="px-4 py-2.5 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none text-white text-sm text-right transition-all"
                               placeholder="التعليق (عربي)"
                               dir="rtl"
                             />
@@ -531,7 +531,7 @@ const ProjectsManagement = () => {
                     type="submit"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="flex-1 py-3 bg-gradient-to-r from-amber-500 to-yellow-400 text-gray-900 rounded-xl font-bold shadow-lg shadow-amber-500/20 hover:shadow-amber-500/40 transition-all"
+                    className="flex-1 py-3 bg-gradient-to-r from-brand-500 to-brand-400 text-gray-900 rounded-xl font-bold shadow-lg shadow-brand-500/20 hover:shadow-brand-500/40 transition-all"
                   >
                     {editingProject ? 'Update Project' : 'Create Project'}
                   </motion.button>

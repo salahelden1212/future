@@ -140,7 +140,7 @@ const PaymentsManagement = () => {
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
-            Payments <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-300">Management</span>
+            Payments <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-300">Management</span>
           </h1>
           <p className="text-gray-400">Track and manage all financial transactions</p>
         </div>
@@ -148,7 +148,7 @@ const PaymentsManagement = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => setShowModal(true)}
-          className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-amber-500 to-yellow-400 text-gray-900 rounded-xl font-semibold shadow-lg shadow-amber-500/20 hover:shadow-amber-500/40 transition-all"
+          className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-brand-500 to-brand-400 text-gray-900 rounded-xl font-semibold shadow-lg shadow-brand-500/20 hover:shadow-brand-500/40 transition-all"
         >
           <FaPlus /> Record Payment
         </motion.button>
@@ -157,7 +157,7 @@ const PaymentsManagement = () => {
       {/* Stats Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {[
-          { label: 'Total Payments', value: totalAmount, icon: FaChartLine, gradient: 'from-amber-500 to-yellow-500', glow: 'shadow-amber-500/20' },
+          { label: 'Total Payments', value: totalAmount, icon: FaChartLine, gradient: 'from-brand-500 to-brand-500', glow: 'shadow-brand-500/20' },
           { label: 'Completed', value: completedAmount, icon: FaCheckCircle, gradient: 'from-green-500 to-emerald-500', glow: 'shadow-green-500/20' },
           { label: 'Pending', value: pendingAmount, icon: FaClock, gradient: 'from-yellow-500 to-orange-500', glow: 'shadow-yellow-500/20' },
         ].map((stat, idx) => (
@@ -166,7 +166,7 @@ const PaymentsManagement = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: idx * 0.1 }}
-            className={`bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-xl rounded-2xl p-6 border border-gray-700/50 hover:border-amber-500/30 transition-all shadow-xl ${stat.glow}`}
+            className={`bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-xl rounded-2xl p-6 border border-gray-700/50 hover:border-brand-500/30 transition-all shadow-xl ${stat.glow}`}
           >
             <div className="flex items-center justify-between mb-4">
               <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${stat.gradient} flex items-center justify-center`}>
@@ -194,7 +194,7 @@ const PaymentsManagement = () => {
             onClick={() => setFilterStatus(status.key)}
             className={`flex items-center gap-2 px-5 py-2.5 rounded-xl font-medium transition-all whitespace-nowrap ${
               filterStatus === status.key
-                ? 'bg-gradient-to-r from-amber-500 to-yellow-400 text-gray-900 shadow-lg shadow-amber-500/20'
+                ? 'bg-gradient-to-r from-brand-500 to-brand-400 text-gray-900 shadow-lg shadow-brand-500/20'
                 : 'bg-gray-800/50 text-gray-400 hover:bg-gray-800 hover:text-white border border-gray-700/50'
             }`}
           >
@@ -208,7 +208,7 @@ const PaymentsManagement = () => {
         <div className="flex items-center justify-center h-64">
           <div className="text-center">
             <div className="relative">
-              <div className="w-16 h-16 border-4 border-amber-200 rounded-full animate-spin border-t-amber-500 mx-auto"></div>
+              <div className="w-16 h-16 border-4 border-brand-200 rounded-full animate-spin border-t-brand-500 mx-auto"></div>
               <div className="w-10 h-10 border-4 border-gray-200 rounded-full animate-spin border-t-gray-500 mx-auto absolute top-3 left-1/2 -translate-x-1/2" style={{ animationDirection: 'reverse' }}></div>
             </div>
             <p className="mt-4 text-gray-400">Loading payments...</p>
@@ -252,8 +252,8 @@ const PaymentsManagement = () => {
                   >
                     <td className="py-4 px-6">
                       <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500/20 to-yellow-500/20 flex items-center justify-center">
-                          <FaReceipt className="text-amber-400" />
+                        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500/10 to-brand-500/20 flex items-center justify-center">
+                          <FaReceipt className="text-brand-400" />
                         </div>
                         <span className="text-white font-mono text-sm">{payment.receiptNumber}</span>
                       </div>
@@ -350,7 +350,7 @@ const PaymentsManagement = () => {
                       required
                       value={formData.client}
                       onChange={(e) => setFormData({ ...formData, client: e.target.value })}
-                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none text-white cursor-pointer"
+                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none text-white cursor-pointer"
                     >
                       <option value="">Select Client</option>
                       {clients.map(client => (
@@ -364,7 +364,7 @@ const PaymentsManagement = () => {
                       required
                       value={formData.property}
                       onChange={(e) => setFormData({ ...formData, property: e.target.value })}
-                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none text-white cursor-pointer"
+                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none text-white cursor-pointer"
                     >
                       <option value="">Select Property</option>
                       {properties.map(prop => (
@@ -385,7 +385,7 @@ const PaymentsManagement = () => {
                         min="0"
                         value={formData.amount}
                         onChange={(e) => setFormData({ ...formData, amount: e.target.value })}
-                        className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white transition-all"
+                        className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white transition-all"
                         placeholder="10000"
                       />
                     </div>
@@ -399,7 +399,7 @@ const PaymentsManagement = () => {
                         required
                         value={formData.paymentDate}
                         onChange={(e) => setFormData({ ...formData, paymentDate: e.target.value })}
-                        className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none text-white"
+                        className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none text-white"
                       />
                     </div>
                   </div>
@@ -410,7 +410,7 @@ const PaymentsManagement = () => {
                       <select
                         value={formData.paymentMethod}
                         onChange={(e) => setFormData({ ...formData, paymentMethod: e.target.value })}
-                        className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none text-white cursor-pointer"
+                        className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none text-white cursor-pointer"
                       >
                         <option value="cash">Cash</option>
                         <option value="bank-transfer">Bank Transfer</option>
@@ -452,7 +452,7 @@ const PaymentsManagement = () => {
                     rows="3"
                     value={formData.notes}
                     onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white transition-all resize-none"
+                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white transition-all resize-none"
                     placeholder="Additional notes..."
                   />
                 </div>
@@ -462,7 +462,7 @@ const PaymentsManagement = () => {
                     type="submit"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="flex-1 py-3 bg-gradient-to-r from-amber-500 to-yellow-400 text-gray-900 rounded-xl font-bold shadow-lg shadow-amber-500/20 hover:shadow-amber-500/40 transition-all"
+                    className="flex-1 py-3 bg-gradient-to-r from-brand-500 to-brand-400 text-gray-900 rounded-xl font-bold shadow-lg shadow-brand-500/20 hover:shadow-brand-500/40 transition-all"
                   >
                     {editingPayment ? 'Update Payment' : 'Record Payment'}
                   </motion.button>

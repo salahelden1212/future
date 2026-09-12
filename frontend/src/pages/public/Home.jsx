@@ -64,7 +64,7 @@ const Home = () => {
             }}
           />
           {/* Animated Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-900/95 via-gray-900/80 to-amber-900/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-surface-100 via-surface-100/95 to-brand-950/30"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-gray-900/50"></div>
         </motion.div>
 
@@ -72,12 +72,12 @@ const Home = () => {
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {/* Large rotating ring */}
           <motion.div
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-amber-500/10 rounded-full"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-brand-500/10 rounded-full"
             animate={{ rotate: 360 }}
             transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
           />
           <motion.div
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-amber-500/20 rounded-full"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-brand-500/20 rounded-full"
             animate={{ rotate: -360 }}
             transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
           />
@@ -92,7 +92,7 @@ const Home = () => {
                 top: `${Math.random() * 100}%`,
                 width: `${2 + Math.random() * 4}px`,
                 height: `${2 + Math.random() * 4}px`,
-                background: `rgba(212, 175, 55, ${0.1 + Math.random() * 0.3})`,
+                background: `rgba(99, 102, 241, ${0.1 + Math.random() * 0.3})`,
               }}
               animate={{
                 y: [0, -50, 0],
@@ -109,7 +109,7 @@ const Home = () => {
 
           {/* Glowing orbs */}
           <motion.div
-            className="absolute top-1/4 right-1/4 w-64 h-64 bg-amber-500/20 rounded-full blur-[100px]"
+            className="absolute top-1/4 right-1/4 w-64 h-64 bg-brand-500/20 rounded-full blur-[100px]"
             animate={{
               scale: [1, 1.3, 1],
               opacity: [0.3, 0.5, 0.3],
@@ -128,7 +128,7 @@ const Home = () => {
 
         {/* Grid Pattern Overlay */}
         <div className="absolute inset-0 opacity-[0.03]" style={{
-          backgroundImage: `linear-gradient(rgba(212, 175, 55, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(212, 175, 55, 0.5) 1px, transparent 1px)`,
+          backgroundImage: `linear-gradient(rgba(99, 102, 241, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(99, 102, 241, 0.5) 1px, transparent 1px)`,
           backgroundSize: '60px 60px'
         }}></div>
         
@@ -160,7 +160,7 @@ const Home = () => {
             >
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-tight tracking-tight">
                 <motion.span 
-                  className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500"
+                  className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 via-brand-500 to-accent-cyan"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.5, type: 'spring' }}
@@ -209,7 +209,7 @@ const Home = () => {
             >
               <Link to="/packages">
                 <motion.button
-                  className="group relative px-8 py-4 bg-gradient-to-r from-amber-500 to-yellow-400 rounded-xl font-bold text-lg text-gray-900 shadow-2xl shadow-amber-500/30 overflow-hidden"
+                  className="group relative px-8 py-4 bg-gradient-to-r from-brand-500 to-brand-600 rounded-xl font-bold text-lg text-gray-900 shadow-2xl shadow-brand-500/30 overflow-hidden"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -217,7 +217,7 @@ const Home = () => {
                     {isArabic ? 'استكشف الباقات' : 'Explore Packages'}
                     <FaArrowRight className={`${isArabic ? 'rotate-180' : ''} group-hover:translate-x-1 transition-transform`} />
                   </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-amber-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-brand-600 to-brand-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </motion.button>
               </Link>
               
@@ -241,7 +241,7 @@ const Home = () => {
               transition={{ delay: 1.5, duration: 0.8 }}
             >
               {[
-                { number: '500+', label: isArabic ? 'مشروع منجز' : 'Projects Completed', Icon: FaAward, color: 'from-amber-500 to-yellow-400' },
+                { number: '500+', label: isArabic ? 'مشروع منجز' : 'Projects Completed', Icon: FaAward, color: 'from-brand-500 to-brand-600' },
                 { number: '15+', label: isArabic ? 'سنة خبرة' : 'Years Experience', Icon: FaClock, color: 'from-blue-500 to-cyan-400' },
                 { number: '100%', label: isArabic ? 'رضا العملاء' : 'Client Satisfaction', Icon: FaUsers, color: 'from-green-500 to-emerald-400' },
               ].map((stat, i) => (
@@ -252,11 +252,11 @@ const Home = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1.6 + i * 0.1 }}
                 >
-                  <div className="bg-gray-800/40 backdrop-blur-xl rounded-2xl p-5 md:p-8 border border-gray-700/50 hover:border-amber-500/50 transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl group-hover:shadow-amber-500/10">
+                  <div className="bg-gray-800/40 backdrop-blur-xl rounded-2xl p-5 md:p-8 border border-gray-700/50 hover:border-brand-500/50 transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl group-hover:shadow-brand-500/10">
                     <div className={`w-12 h-12 md:w-14 md:h-14 mx-auto mb-4 rounded-xl bg-gradient-to-br ${stat.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                       <stat.Icon className="text-xl md:text-2xl text-white" />
                     </div>
-                    <div className="text-3xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-300 mb-2">
+                    <div className="text-3xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-300 mb-2">
                       {stat.number}
                     </div>
                     <div className="text-xs md:text-sm text-gray-400 font-medium">{stat.label}</div>
@@ -280,7 +280,7 @@ const Home = () => {
             </span>
             <div className="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center p-2">
               <motion.div 
-                className="w-1.5 h-1.5 bg-amber-400 rounded-full"
+                className="w-1.5 h-1.5 bg-brand-400 rounded-full"
                 animate={{ y: [0, 12, 0] }}
                 transition={{ duration: 1.5, repeat: Infinity }}
               />
@@ -296,14 +296,14 @@ const Home = () => {
       <section className="py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-amber-500/5 rounded-full blur-[150px]"></div>
+          <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-brand-500/5 rounded-full blur-[150px]"></div>
           <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[150px]"></div>
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-500/5 rounded-full blur-[180px]"></div>
         </div>
 
         {/* Grid Pattern */}
         <div className="absolute inset-0 opacity-[0.02]" style={{
-          backgroundImage: `linear-gradient(rgba(212, 175, 55, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(212, 175, 55, 0.5) 1px, transparent 1px)`,
+          backgroundImage: `linear-gradient(rgba(99, 102, 241, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(99, 102, 241, 0.5) 1px, transparent 1px)`,
           backgroundSize: '50px 50px'
         }}></div>
 
@@ -319,17 +319,17 @@ const Home = () => {
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500/20 to-amber-600/20 backdrop-blur-sm border border-amber-500/30 rounded-full px-6 py-2 mb-6"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-brand-500/10 to-brand-500/5 backdrop-blur-sm border border-brand-500/20 rounded-full px-6 py-2 mb-6"
             >
-              <FaStar className="text-amber-400" />
-              <span className="text-amber-300 font-medium">
+              <FaStar className="text-brand-400" />
+              <span className="text-brand-300 font-medium">
                 {isArabic ? 'لماذا نحن' : 'Why Choose Us'}
               </span>
             </motion.div>
 
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               <span className="text-white">{isArabic ? 'لماذا ' : 'Why '}</span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 via-brand-500 to-accent-cyan">
                 Future Finish
               </span>
               <span className="text-white"></span>
@@ -386,8 +386,8 @@ const Home = () => {
                 desc: isArabic
                   ? 'نعمل بكفاءة عالية لإنجاز المشاريع في أسرع وقت'
                   : 'We work efficiently to complete projects in the shortest time',
-                gradient: 'from-amber-500 to-yellow-500',
-                bgGlow: 'group-hover:shadow-amber-500/20'
+                gradient: 'from-brand-500 to-brand-500',
+                bgGlow: 'group-hover:shadow-brand-500/20'
               },
               {
                 icon: FaCheckCircle,
@@ -407,14 +407,14 @@ const Home = () => {
                 transition={{ delay: index * 0.1 }}
                 className="group"
               >
-                <div className={`relative h-full bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50 hover:border-amber-500/30 transition-all duration-500 hover:-translate-y-2 shadow-xl ${item.bgGlow} hover:shadow-2xl`}>
+                <div className={`relative h-full bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50 hover:border-brand-500/20 transition-all duration-500 hover:-translate-y-2 shadow-xl ${item.bgGlow} hover:shadow-2xl`}>
                   {/* Icon */}
                   <div className={`w-16 h-16 bg-gradient-to-br ${item.gradient} rounded-2xl flex items-center justify-center mb-6 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg`}>
                     <item.icon className="text-2xl text-white" />
                   </div>
                   
                   {/* Content */}
-                  <h3 className="text-xl md:text-2xl font-bold text-white mb-3 group-hover:text-amber-400 transition-colors duration-300">
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-3 group-hover:text-brand-400 transition-colors duration-300">
                     {item.title}
                   </h3>
                   <p className="text-gray-400 leading-relaxed">
@@ -436,7 +436,7 @@ const Home = () => {
       <section className="py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-amber-500/10 rounded-full blur-[120px]"></div>
+          <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-brand-500/10 rounded-full blur-[120px]"></div>
           <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[120px]"></div>
         </div>
 
@@ -451,17 +451,17 @@ const Home = () => {
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500/20 to-amber-600/20 backdrop-blur-sm border border-amber-500/30 rounded-full px-6 py-2 mb-6"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-brand-500/10 to-brand-500/5 backdrop-blur-sm border border-brand-500/20 rounded-full px-6 py-2 mb-6"
             >
-              <FaStar className="text-amber-400" />
-              <span className="text-amber-300 font-medium">
+              <FaStar className="text-brand-400" />
+              <span className="text-brand-300 font-medium">
                 {isArabic ? 'باقات حصرية' : 'Exclusive Packages'}
               </span>
             </motion.div>
 
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               <span className="text-white">{isArabic ? 'باقاتنا ' : 'Our '}</span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 via-brand-500 to-accent-cyan">
                 {isArabic ? 'المميزة' : 'Packages'}
               </span>
             </h2>
@@ -488,16 +488,16 @@ const Home = () => {
                   <div className={`relative h-full rounded-3xl transition-all duration-500 group-hover:-translate-y-3 overflow-visible`}>
                     {/* Gradient Border for VIP */}
                     {isVIP && (
-                      <div className="absolute -inset-[2px] bg-gradient-to-br from-amber-500 via-yellow-400 to-amber-600 rounded-3xl opacity-100"></div>
+                      <div className="absolute -inset-[2px] bg-gradient-to-br from-brand-500 via-brand-400 to-brand-700 rounded-3xl opacity-100"></div>
                     )}
 
-                    <div className={`relative h-full bg-gradient-to-br from-gray-800/95 to-gray-900/95 backdrop-blur-xl rounded-3xl p-8 pt-10 border ${isVIP ? 'border-transparent' : 'border-gray-700/50 group-hover:border-amber-500/30'} transition-all duration-500 overflow-visible`}>
+                    <div className={`relative h-full bg-gradient-to-br from-gray-800/95 to-gray-900/95 backdrop-blur-xl rounded-3xl p-8 pt-10 border ${isVIP ? 'border-transparent' : 'border-gray-700/50 group-hover:border-brand-500/20'} transition-all duration-500 overflow-visible`}>
                       {/* Badge */}
                       {pkg.badge && (
                         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-30">
                           <span className={`inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-black/30 ${
                             isVIP 
-                              ? 'bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500 text-gray-900' 
+                              ? 'bg-gradient-to-r from-brand-500 via-brand-400 to-brand-500 text-gray-900' 
                               : 'bg-gradient-to-r from-blue-500 to-cyan-400 text-white'
                           }`}>
                             {isVIP && <FaCrown className="text-gray-900" />}
@@ -507,7 +507,7 @@ const Home = () => {
                       )}
 
                       {/* Package Name */}
-                      <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 mt-4 group-hover:text-amber-400 transition-colors">
+                      <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 mt-4 group-hover:text-brand-400 transition-colors">
                         {isArabic ? pkg.name.ar : pkg.name.en}
                       </h3>
 
@@ -522,11 +522,11 @@ const Home = () => {
                           </span>
                         </div>
                         <div className="flex items-baseline gap-2 flex-wrap">
-                          <span className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-300">
+                          <span className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-300">
                             {pkg.priceAfter.toLocaleString()}
                           </span>
                           <span className="text-gray-400 text-lg">{isArabic ? 'جنيه' : 'EGP'}</span>
-                          <span className="text-amber-400/80 text-sm font-medium">/ {isArabic ? 'للمتر' : 'per m²'}</span>
+                          <span className="text-brand-400/80 text-sm font-medium">/ {isArabic ? 'للمتر' : 'per m²'}</span>
                         </div>
                       </div>
 
@@ -534,7 +534,7 @@ const Home = () => {
                       <ul className="space-y-3 mb-8">
                         {pkg.features.slice(0, 5).map((feature, i) => (
                           <li key={i} className="flex items-start gap-3 text-gray-300">
-                            <div className={`flex-shrink-0 w-5 h-5 rounded-full ${isVIP ? 'bg-gradient-to-r from-amber-500 to-yellow-400' : 'bg-gradient-to-r from-green-500 to-emerald-400'} flex items-center justify-center mt-0.5`}>
+                            <div className={`flex-shrink-0 w-5 h-5 rounded-full ${isVIP ? 'bg-gradient-to-r from-brand-500 to-brand-600' : 'bg-gradient-to-r from-green-500 to-emerald-400'} flex items-center justify-center mt-0.5`}>
                               <FaCheckCircle className="text-white text-xs" />
                             </div>
                             <span className="text-sm leading-relaxed">{isArabic ? feature.ar : feature.en}</span>
@@ -547,8 +547,8 @@ const Home = () => {
                         to="/packages" 
                         className={`block w-full text-center py-4 rounded-xl font-bold text-lg transition-all duration-300 ${
                           isVIP
-                            ? 'bg-gradient-to-r from-amber-500 to-yellow-400 text-gray-900 hover:shadow-xl hover:shadow-amber-500/30'
-                            : 'bg-gray-700/50 hover:bg-gradient-to-r hover:from-amber-500 hover:to-yellow-400 text-white hover:text-gray-900'
+                            ? 'bg-gradient-to-r from-brand-500 to-brand-600 text-gray-900 hover:shadow-xl hover:shadow-brand-500/30'
+                            : 'bg-gray-700/50 hover:bg-gradient-to-r hover:from-brand-500 hover:to-brand-400 text-white hover:text-gray-900'
                         } transform hover:scale-[1.02]`}
                       >
                         {isArabic ? 'تفاصيل الباقة' : 'Package Details'}
@@ -558,7 +558,7 @@ const Home = () => {
 
                   {/* Glow Effect */}
                   {isVIP && (
-                    <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-amber-500 to-yellow-400 opacity-20 blur-xl -z-10 group-hover:opacity-30 transition-opacity"></div>
+                    <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-brand-500 to-brand-600 opacity-20 blur-xl -z-10 group-hover:opacity-30 transition-opacity"></div>
                   )}
                 </motion.div>
               );
@@ -566,7 +566,7 @@ const Home = () => {
           </div>
 
           <div className="text-center">
-            <Link to="/packages" className="inline-flex items-center gap-3 bg-gray-800/50 hover:bg-gray-700/50 border border-gray-600/50 hover:border-amber-500/50 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 group">
+            <Link to="/packages" className="inline-flex items-center gap-3 bg-gray-800/50 hover:bg-gray-700/50 border border-gray-600/50 hover:border-brand-500/50 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 group">
               <span>{t('common.viewAll')}</span>
               <FaArrowRight className={`${isArabic ? 'rotate-180' : ''} group-hover:translate-x-1 transition-transform`} />
             </Link>
@@ -580,13 +580,13 @@ const Home = () => {
       <section className="py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-amber-500/5 rounded-full blur-[150px]"></div>
+          <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-brand-500/5 rounded-full blur-[150px]"></div>
           <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-blue-500/5 rounded-full blur-[150px]"></div>
         </div>
 
         {/* Grid Pattern */}
         <div className="absolute inset-0 opacity-[0.02]" style={{
-          backgroundImage: `linear-gradient(rgba(212, 175, 55, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(212, 175, 55, 0.5) 1px, transparent 1px)`,
+          backgroundImage: `linear-gradient(rgba(99, 102, 241, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(99, 102, 241, 0.5) 1px, transparent 1px)`,
           backgroundSize: '40px 40px'
         }}></div>
 
@@ -602,17 +602,17 @@ const Home = () => {
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500/20 to-amber-600/20 backdrop-blur-sm border border-amber-500/30 rounded-full px-6 py-2 mb-6"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-brand-500/10 to-brand-500/5 backdrop-blur-sm border border-brand-500/20 rounded-full px-6 py-2 mb-6"
             >
-              <FaStar className="text-amber-400" />
-              <span className="text-amber-300 font-medium">
+              <FaStar className="text-brand-400" />
+              <span className="text-brand-300 font-medium">
                 {isArabic ? 'أعمالنا المتميزة' : 'Our Portfolio'}
               </span>
             </motion.div>
 
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               <span className="text-white">{isArabic ? 'مشاريعنا ' : 'Featured '}</span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 via-brand-500 to-accent-cyan">
                 {isArabic ? 'المميزة' : 'Projects'}
               </span>
             </h2>
@@ -651,13 +651,13 @@ const Home = () => {
                       <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-500"></div>
                       
                       {/* Hover Reveal Border */}
-                      <div className="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-amber-500/50 transition-all duration-500"></div>
+                      <div className="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-brand-500/50 transition-all duration-500"></div>
                       
                       {/* Top Badge */}
                       <div className="absolute top-4 right-4 flex items-center gap-2">
                         {project.location && (
                           <span className="bg-gray-900/80 backdrop-blur-sm text-white text-xs px-3 py-1.5 rounded-full flex items-center gap-1.5">
-                            <FaMapMarkerAlt className="text-amber-400" />
+                            <FaMapMarkerAlt className="text-brand-400" />
                             {isArabic ? project.location.ar : project.location.en}
                           </span>
                         )}
@@ -666,12 +666,12 @@ const Home = () => {
                       {/* Content */}
                       <div className="absolute inset-x-0 bottom-0 p-6">
                         {/* Category Tag */}
-                        <span className="inline-block bg-gradient-to-r from-amber-500/90 to-yellow-500/90 text-gray-900 text-xs font-bold px-3 py-1 rounded-full mb-3">
+                        <span className="inline-block bg-gradient-to-r from-brand-500/90 to-brand-500/90 text-gray-900 text-xs font-bold px-3 py-1 rounded-full mb-3">
                           {isArabic ? 'تشطيبات فاخرة' : 'Premium Finish'}
                         </span>
                         
                         {/* Title */}
-                        <h3 className="text-2xl md:text-3xl font-bold text-white mb-2 group-hover:text-amber-400 transition-colors duration-300">
+                        <h3 className="text-2xl md:text-3xl font-bold text-white mb-2 group-hover:text-brand-400 transition-colors duration-300">
                           {isArabic ? project.title.ar : project.title.en}
                         </h3>
                         
@@ -681,7 +681,7 @@ const Home = () => {
                         </p>
                         
                         {/* View Button */}
-                        <div className="flex items-center gap-2 text-amber-400 font-semibold opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-100">
+                        <div className="flex items-center gap-2 text-brand-400 font-semibold opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-100">
                           <span>{isArabic ? 'عرض المشروع' : 'View Project'}</span>
                           <FaArrowRight className={`${isArabic ? 'rotate-180' : ''} group-hover:translate-x-2 transition-transform duration-300`} />
                         </div>
@@ -712,7 +712,7 @@ const Home = () => {
           >
             <Link 
               to="/projects" 
-              className="group inline-flex items-center gap-3 bg-gray-800/50 hover:bg-gradient-to-r hover:from-amber-500 hover:to-yellow-400 border border-gray-600/50 hover:border-transparent text-white hover:text-gray-900 px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-500"
+              className="group inline-flex items-center gap-3 bg-gray-800/50 hover:bg-gradient-to-r hover:from-brand-500 hover:to-brand-400 border border-gray-600/50 hover:border-transparent text-white hover:text-gray-900 px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-500"
             >
               <span>{isArabic ? 'عرض جميع المشاريع' : 'View All Projects'}</span>
               <FaArrowRight className={`${isArabic ? 'rotate-180' : ''} group-hover:translate-x-2 transition-transform duration-300`} />
@@ -726,7 +726,7 @@ const Home = () => {
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
           <motion.div 
-            className="absolute top-0 left-1/4 w-72 h-72 bg-primary/20 rounded-full filter blur-3xl"
+            className="absolute top-0 left-1/4 w-72 h-72 bg-brand-500/20 rounded-full filter blur-3xl"
             animate={{ 
               scale: [1, 1.2, 1],
               opacity: [0.3, 0.5, 0.3]
@@ -734,7 +734,7 @@ const Home = () => {
             transition={{ duration: 4, repeat: Infinity }}
           />
           <motion.div 
-            className="absolute bottom-0 right-1/4 w-72 h-72 bg-primary/20 rounded-full filter blur-3xl"
+            className="absolute bottom-0 right-1/4 w-72 h-72 bg-brand-500/20 rounded-full filter blur-3xl"
             animate={{ 
               scale: [1.2, 1, 1.2],
               opacity: [0.5, 0.3, 0.5]
@@ -782,7 +782,7 @@ const Home = () => {
             >
               <Link 
                 to="/contact" 
-                className="btn-primary text-lg px-12 py-4 inline-flex items-center gap-3 group shadow-xl shadow-primary/30 hover:shadow-2xl hover:shadow-primary/50"
+                className="btn-primary text-lg px-12 py-4 inline-flex items-center gap-3 group shadow-xl shadow-brand-500/30 hover:shadow-2xl hover:shadow-brand-500/50"
               >
                 <span>{t('common.contactUs')}</span>
                 <FaArrowRight className={`${isArabic ? 'rotate-180' : ''} group-hover:translate-x-1 transition-transform`} />
@@ -815,7 +815,7 @@ const Home = () => {
                   { icon: FaCheckCircle, text: isArabic ? 'رضا العملاء' : 'Customer Satisfaction' },
                 ].map((item, i) => (
                   <div key={i} className="flex flex-col items-center gap-3">
-                    <item.icon className="text-3xl text-primary" />
+                    <item.icon className="text-3xl text-brand-400" />
                     <span className="text-gray-400 text-sm">{item.text}</span>
                   </div>
                 ))}

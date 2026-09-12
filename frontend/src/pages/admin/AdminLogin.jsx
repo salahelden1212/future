@@ -6,7 +6,6 @@ import { FaLock, FaEnvelope, FaEye, FaEyeSlash, FaShieldAlt } from 'react-icons/
 import { authAPI } from '../../services/apiService';
 import { useAuthStore } from '../../store/authStore';
 
-// Logo path
 const logoDark = '/images/logo-dark.png';
 
 const AdminLogin = () => {
@@ -37,72 +36,66 @@ const AdminLogin = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center justify-center px-4 relative overflow-hidden">
+    <div className="min-h-screen bg-surface flex items-center justify-center px-4 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-amber-500/10 rounded-full blur-[150px]"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[150px]"></div>
+        <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-brand-500/10 rounded-full blur-[150px]"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-accent-cyan/8 rounded-full blur-[150px]"></div>
       </div>
 
-      {/* Grid Pattern */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: `linear-gradient(rgba(212, 175, 55, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(212, 175, 55, 0.5) 1px, transparent 1px)`,
-        backgroundSize: '50px 50px'
-      }}></div>
-
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.5 }}
         className="w-full max-w-md relative z-10"
       >
         {/* Card */}
-        <div className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 md:p-10 border border-gray-700/50 shadow-2xl">
+        <div className="glass-strong rounded-3xl p-8 md:p-10">
           {/* Logo & Header */}
-          <div className="text-center mb-10">
+          <div className="text-center mb-8">
             <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ delay: 0.1, type: 'spring', stiffness: 200 }}
               className="mb-6"
             >
-              <img 
-                src={logoDark} 
-                alt="Future Finish" 
-                className="h-20 w-auto mx-auto"
+              <img
+                src={logoDark}
+                alt="Future Finish"
+                className="h-16 w-auto mx-auto"
                 onError={(e) => { e.target.style.display = 'none'; }}
               />
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
+              transition={{ delay: 0.2 }}
             >
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500/20 to-amber-600/20 backdrop-blur-sm border border-amber-500/30 rounded-full px-4 py-1.5 mb-4">
-                <FaShieldAlt className="text-amber-400 text-sm" />
-                <span className="text-amber-300 text-sm font-medium">Admin Portal</span>
+              <div className="badge-brand inline-flex mb-4">
+                <FaShieldAlt className="text-xs" />
+                <span>Admin Portal</span>
               </div>
-              <h1 className="text-3xl font-bold mb-2">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500">FUTURE</span>
-                <span className="text-white ml-2">ADMIN</span>
+              <h1 className="text-2xl font-bold mb-1.5">
+                <span className="text-gradient-brand">FUTURE</span>
+                <span className="text-white/90 ml-2">ADMIN</span>
               </h1>
-              <p className="text-gray-400">Sign in to access your dashboard</p>
+              <p className="text-muted-light text-sm">Sign in to access your dashboard</p>
             </motion.div>
           </div>
 
           {/* Form */}
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-5">
             {/* Email Field */}
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: -10 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4 }}
+              transition={{ delay: 0.3 }}
             >
-              <label className="block text-gray-300 text-sm font-medium mb-2">Email Address</label>
+              <label className="block text-muted-light text-sm font-medium mb-2">Email Address</label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                  <FaEnvelope className="text-gray-500" />
+                  <FaEnvelope className="text-muted text-sm" />
                 </div>
                 <input
                   type="email"
@@ -111,21 +104,21 @@ const AdminLogin = () => {
                   onChange={handleChange}
                   required
                   placeholder="admin@futurefinish.com"
-                  className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-500 focus:border-amber-500/50 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all duration-300"
+                  className="input-brand pl-11"
                 />
               </div>
             </motion.div>
 
             {/* Password Field */}
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: -10 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.5 }}
+              transition={{ delay: 0.35 }}
             >
-              <label className="block text-gray-300 text-sm font-medium mb-2">Password</label>
+              <label className="block text-muted-light text-sm font-medium mb-2">Password</label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                  <FaLock className="text-gray-500" />
+                  <FaLock className="text-muted text-sm" />
                 </div>
                 <input
                   type={showPassword ? 'text' : 'password'}
@@ -134,32 +127,32 @@ const AdminLogin = () => {
                   onChange={handleChange}
                   required
                   placeholder="••••••••"
-                  className="w-full pl-12 pr-12 py-4 bg-gray-800/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-500 focus:border-amber-500/50 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all duration-300"
+                  className="input-brand pl-11 pr-11"
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute inset-y-0 right-0 pr-4 flex items-center text-gray-500 hover:text-amber-400 transition-colors"
+                  className="absolute inset-y-0 right-0 pr-4 flex items-center text-muted hover:text-brand-400 transition-colors"
                 >
-                  {showPassword ? <FaEyeSlash /> : <FaEye />}
+                  {showPassword ? <FaEyeSlash className="text-sm" /> : <FaEye className="text-sm" />}
                 </button>
               </div>
             </motion.div>
 
             {/* Submit Button */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
+              transition={{ delay: 0.4 }}
             >
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full py-4 bg-gradient-to-r from-amber-500 to-yellow-400 hover:from-amber-600 hover:to-yellow-500 text-gray-900 font-bold text-lg rounded-xl shadow-lg shadow-amber-500/30 hover:shadow-xl hover:shadow-amber-500/40 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                className="w-full py-3.5 bg-gradient-to-r from-brand-500 to-brand-600 hover:from-brand-600 hover:to-brand-700 text-white font-semibold rounded-xl shadow-brand hover:shadow-brand-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 text-sm"
               >
                 {loading ? (
                   <>
-                    <div className="w-5 h-5 border-2 border-gray-900 border-t-transparent rounded-full animate-spin"></div>
+                    <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
                     <span>Signing in...</span>
                   </>
                 ) : (
@@ -176,11 +169,11 @@ const AdminLogin = () => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.7 }}
-            className="mt-8 pt-6 border-t border-gray-700/50 text-center"
+            transition={{ delay: 0.5 }}
+            className="mt-6 pt-5 border-t border-white/5 text-center"
           >
-            <p className="text-gray-500 text-sm">
-              Secured by <span className="text-amber-400">Future Finish</span>
+            <p className="text-muted text-xs">
+              Secured by <span className="text-brand-400">Future Finish</span>
             </p>
           </motion.div>
         </div>

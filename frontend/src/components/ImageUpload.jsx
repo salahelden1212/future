@@ -146,7 +146,7 @@ const ImageUpload = ({
       <div
         className={`relative border-2 border-dashed rounded-lg transition-all duration-300 ${
           dragActive
-            ? 'border-primary bg-primary/10'
+            ? 'border-primary bg-brand-500/10'
             : 'border-gray-600 hover:border-primary/50'
         } ${uploading ? 'pointer-events-none opacity-50' : ''}`}
         onDragEnter={handleDrag}
@@ -169,7 +169,7 @@ const ImageUpload = ({
         >
           {uploading ? (
             <div className="space-y-3">
-              <FaSpinner className="w-12 h-12 mx-auto text-primary animate-spin" />
+              <FaSpinner className="w-12 h-12 mx-auto text-brand-400 animate-spin" />
               <p className="text-gray-400">Uploading...</p>
             </div>
           ) : (

@@ -89,7 +89,7 @@ const ContactMessages = () => {
       {/* Header */}
       <div>
         <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
-          Contact <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-300">Messages</span>
+          Contact <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-300">Messages</span>
         </h1>
         <p className="text-gray-400">Manage website inquiries and messages</p>
       </div>
@@ -97,7 +97,7 @@ const ContactMessages = () => {
       {/* Stats Cards */}
       <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
         {[
-          { label: 'All', value: statusCounts.all, gradient: 'from-amber-500 to-yellow-500', icon: FaInbox },
+          { label: 'All', value: statusCounts.all, gradient: 'from-brand-500 to-brand-500', icon: FaInbox },
           { label: 'New', value: statusCounts.new, gradient: 'from-blue-500 to-cyan-500', icon: FaEnvelope },
           { label: 'Read', value: statusCounts.read, gradient: 'from-gray-500 to-gray-600', icon: FaEye },
           { label: 'Replied', value: statusCounts.replied, gradient: 'from-green-500 to-emerald-500', icon: FaCheckCircle },
@@ -131,7 +131,7 @@ const ContactMessages = () => {
             onClick={() => setFilter(status)}
             className={`px-5 py-2.5 rounded-xl whitespace-nowrap transition-all font-medium ${
               filter === status
-                ? 'bg-gradient-to-r from-amber-500 to-yellow-400 text-gray-900 shadow-lg shadow-amber-500/20'
+                ? 'bg-gradient-to-r from-brand-500 to-brand-400 text-gray-900 shadow-lg shadow-brand-500/20'
                 : 'bg-gray-800/60 text-gray-400 hover:bg-gray-700/60 border border-gray-700/50'
             }`}
           >
@@ -144,7 +144,7 @@ const ContactMessages = () => {
         <div className="flex items-center justify-center h-64">
           <div className="text-center">
             <div className="relative">
-              <div className="w-16 h-16 border-4 border-amber-200 rounded-full animate-spin border-t-amber-500 mx-auto"></div>
+              <div className="w-16 h-16 border-4 border-brand-200 rounded-full animate-spin border-t-brand-500 mx-auto"></div>
               <div className="w-10 h-10 border-4 border-gray-200 rounded-full animate-spin border-t-gray-500 mx-auto absolute top-3 left-1/2 -translate-x-1/2" style={{ animationDirection: 'reverse' }}></div>
             </div>
             <p className="mt-4 text-gray-400">Loading messages...</p>
@@ -171,7 +171,7 @@ const ContactMessages = () => {
                 onClick={() => handleMarkAsRead(message)}
                 className={`bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-xl rounded-xl border p-4 cursor-pointer transition-all ${
                   selectedMessage?._id === message._id
-                    ? 'border-amber-500/50 bg-amber-500/5'
+                    ? 'border-brand-500/50 bg-brand-500/5'
                     : 'border-gray-700/50 hover:border-gray-600'
                 } ${message.status === 'new' ? 'ring-1 ring-blue-500/30' : ''}`}
               >
@@ -223,13 +223,13 @@ const ContactMessages = () => {
                     <h2 className="text-2xl font-bold text-white mb-2">{selectedMessage.subject}</h2>
                     <div className="flex flex-wrap items-center gap-4 text-gray-400">
                       <span className="flex items-center gap-2">
-                        <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-amber-500 to-yellow-400 flex items-center justify-center">
+                        <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-brand-500 to-brand-400 flex items-center justify-center">
                           <FaUser className="text-gray-900 text-xs" />
                         </div>
                         {selectedMessage.name}
                       </span>
                       <span className="flex items-center gap-2">
-                        <FaClock className="text-amber-500/50" />
+                        <FaClock className="text-brand-500/50" />
                         {new Date(selectedMessage.createdAt).toLocaleString('en-US', {
                           dateStyle: 'medium',
                           timeStyle: 'short'
@@ -248,7 +248,7 @@ const ContactMessages = () => {
                     <p className="text-gray-400 text-sm mb-1">Email</p>
                     <a
                       href={`mailto:${selectedMessage.email}`}
-                      className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-300 hover:underline flex items-center gap-2 font-medium"
+                      className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-300 hover:underline flex items-center gap-2 font-medium"
                     >
                       {selectedMessage.email}
                     </a>
@@ -257,9 +257,9 @@ const ContactMessages = () => {
                     <p className="text-gray-400 text-sm mb-1">Phone</p>
                     <a
                       href={`tel:${selectedMessage.phone}`}
-                      className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-300 hover:underline flex items-center gap-2 font-medium"
+                      className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-300 hover:underline flex items-center gap-2 font-medium"
                     >
-                      <FaPhone className="text-amber-500 text-sm" /> {selectedMessage.phone}
+                      <FaPhone className="text-brand-500 text-sm" /> {selectedMessage.phone}
                     </a>
                   </div>
                 </div>

@@ -146,7 +146,7 @@ const PropertiesManagement = () => {
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
-            Properties <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-300">Management</span>
+            Properties <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-300">Management</span>
           </h1>
           <p className="text-gray-400">Manage units and projects with client linkage</p>
         </div>
@@ -154,7 +154,7 @@ const PropertiesManagement = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => setShowModal(true)}
-          className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-amber-500 to-yellow-400 text-gray-900 rounded-xl font-semibold shadow-lg shadow-amber-500/20 hover:shadow-amber-500/40 transition-all"
+          className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-brand-500 to-brand-400 text-gray-900 rounded-xl font-semibold shadow-lg shadow-brand-500/20 hover:shadow-brand-500/40 transition-all"
         >
           <FaPlus />
           <span>Add Property</span>
@@ -164,7 +164,7 @@ const PropertiesManagement = () => {
       {/* Stats Cards */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {[
-          { label: 'Total Properties', value: properties.length, gradient: 'from-amber-500 to-yellow-500', icon: FaBuilding },
+          { label: 'Total Properties', value: properties.length, gradient: 'from-brand-500 to-brand-500', icon: FaBuilding },
           { label: 'In Progress', value: properties.filter(p => p.status === 'in-progress').length, gradient: 'from-yellow-500 to-orange-500', icon: FaClock },
           { label: 'Completed', value: properties.filter(p => p.status === 'completed').length, gradient: 'from-green-500 to-emerald-500', icon: FaHome },
           { label: 'Pending', value: properties.filter(p => p.status === 'pending').length, gradient: 'from-purple-500 to-pink-500', icon: FaClipboardList },
@@ -196,7 +196,7 @@ const PropertiesManagement = () => {
             placeholder="Search by address or client name..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white transition-all"
+            className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white transition-all"
           />
         </div>
       </div>
@@ -205,7 +205,7 @@ const PropertiesManagement = () => {
         <div className="flex items-center justify-center h-64">
           <div className="text-center">
             <div className="relative">
-              <div className="w-16 h-16 border-4 border-amber-200 rounded-full animate-spin border-t-amber-500 mx-auto"></div>
+              <div className="w-16 h-16 border-4 border-brand-200 rounded-full animate-spin border-t-brand-500 mx-auto"></div>
               <div className="w-10 h-10 border-4 border-gray-200 rounded-full animate-spin border-t-gray-500 mx-auto absolute top-3 left-1/2 -translate-x-1/2" style={{ animationDirection: 'reverse' }}></div>
             </div>
             <p className="mt-4 text-gray-400">Loading properties...</p>
@@ -227,17 +227,17 @@ const PropertiesManagement = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.05 }}
-              className="bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-xl rounded-2xl border border-gray-700/50 p-5 hover:border-amber-500/30 transition-all group"
+              className="bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-xl rounded-2xl border border-gray-700/50 p-5 hover:border-brand-500/30 transition-all group"
             >
               <div className="flex justify-between items-start mb-4">
                 <div className="flex items-start gap-3">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-yellow-400 flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-500 to-brand-400 flex items-center justify-center flex-shrink-0">
                     <FaBuilding className="text-gray-900" />
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-white mb-1">{property.address}</h3>
                     <p className="text-gray-400 text-sm flex items-center gap-1">
-                      <FaUserTie className="text-amber-500/50" />
+                      <FaUserTie className="text-brand-500/50" />
                       {property.client?.name}
                     </p>
                   </div>
@@ -264,7 +264,7 @@ const PropertiesManagement = () => {
                   <span className="text-gray-400 text-sm flex items-center gap-2">
                     <FaMoneyBillWave className="text-gray-500" /> Total
                   </span>
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-300 font-bold">{property.totalPrice.toLocaleString()} EGP</span>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-300 font-bold">{property.totalPrice.toLocaleString()} EGP</span>
                 </div>
               </div>
 
@@ -330,7 +330,7 @@ const PropertiesManagement = () => {
                         required
                         value={formData.client}
                         onChange={(e) => setFormData({ ...formData, client: e.target.value })}
-                        className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none text-white cursor-pointer appearance-none"
+                        className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none text-white cursor-pointer appearance-none"
                       >
                         <option value="">Select Client</option>
                         {clients.map(client => (
@@ -346,7 +346,7 @@ const PropertiesManagement = () => {
                       <select
                         value={formData.propertyType}
                         onChange={(e) => setFormData({ ...formData, propertyType: e.target.value })}
-                        className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none text-white cursor-pointer appearance-none"
+                        className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none text-white cursor-pointer appearance-none"
                       >
                         <option value="apartment">Apartment</option>
                         <option value="villa">Villa</option>
@@ -368,7 +368,7 @@ const PropertiesManagement = () => {
                       required
                       value={formData.address}
                       onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-                      className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white transition-all"
+                      className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white transition-all"
                       placeholder="Riyadh, Al Olaya District"
                     />
                   </div>
@@ -385,7 +385,7 @@ const PropertiesManagement = () => {
                         min="0"
                         value={formData.area}
                         onChange={(e) => setFormData({ ...formData, area: e.target.value })}
-                        className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white transition-all"
+                        className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white transition-all"
                         placeholder="150"
                       />
                     </div>
@@ -400,7 +400,7 @@ const PropertiesManagement = () => {
                         min="0"
                         value={formData.totalPrice}
                         onChange={(e) => setFormData({ ...formData, totalPrice: e.target.value })}
-                        className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white transition-all"
+                        className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white transition-all"
                         placeholder="100000"
                       />
                     </div>
@@ -415,7 +415,7 @@ const PropertiesManagement = () => {
                       <select
                         value={formData.selectedPackage}
                         onChange={(e) => setFormData({ ...formData, selectedPackage: e.target.value })}
-                        className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none text-white cursor-pointer appearance-none"
+                        className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none text-white cursor-pointer appearance-none"
                       >
                         <option value="">None</option>
                         {packages.map(pkg => (
@@ -431,7 +431,7 @@ const PropertiesManagement = () => {
                       <select
                         value={formData.status}
                         onChange={(e) => setFormData({ ...formData, status: e.target.value })}
-                        className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none text-white cursor-pointer appearance-none"
+                        className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none text-white cursor-pointer appearance-none"
                       >
                         <option value="pending">Pending</option>
                         <option value="in-progress">In Progress</option>
@@ -452,7 +452,7 @@ const PropertiesManagement = () => {
                         type="date"
                         value={formData.startDate}
                         onChange={(e) => setFormData({ ...formData, startDate: e.target.value })}
-                        className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none text-white"
+                        className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none text-white"
                       />
                     </div>
                   </div>
@@ -464,7 +464,7 @@ const PropertiesManagement = () => {
                         type="date"
                         value={formData.expectedEndDate}
                         onChange={(e) => setFormData({ ...formData, expectedEndDate: e.target.value })}
-                        className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none text-white"
+                        className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none text-white"
                       />
                     </div>
                   </div>
@@ -476,7 +476,7 @@ const PropertiesManagement = () => {
                     rows="3"
                     value={formData.notes}
                     onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white transition-all resize-none"
+                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-brand-500/50 focus:outline-none focus:ring-2 focus:ring-brand-500/20 text-white transition-all resize-none"
                     placeholder="Additional notes..."
                   />
                 </div>
@@ -486,7 +486,7 @@ const PropertiesManagement = () => {
                     type="submit"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="flex-1 py-3 bg-gradient-to-r from-amber-500 to-yellow-400 text-gray-900 rounded-xl font-bold shadow-lg shadow-amber-500/20 hover:shadow-amber-500/40 transition-all"
+                    className="flex-1 py-3 bg-gradient-to-r from-brand-500 to-brand-400 text-gray-900 rounded-xl font-bold shadow-lg shadow-brand-500/20 hover:shadow-brand-500/40 transition-all"
                   >
                     {editingProperty ? 'Update Property' : 'Create Property'}
                   </motion.button>

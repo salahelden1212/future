@@ -53,13 +53,13 @@ const Contact = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-1/3 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-[150px]"></div>
+        <div className="absolute top-0 left-1/3 w-[600px] h-[600px] bg-brand-500/10 rounded-full blur-[150px]"></div>
         <div className="absolute bottom-0 right-1/3 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[150px]"></div>
       </div>
 
       {/* Grid Pattern */}
       <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: `linear-gradient(rgba(212, 175, 55, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(212, 175, 55, 0.3) 1px, transparent 1px)`,
+        backgroundImage: `linear-gradient(rgba(99, 102, 241, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(99, 102, 241, 0.3) 1px, transparent 1px)`,
         backgroundSize: '50px 50px'
       }}></div>
 
@@ -76,17 +76,17 @@ const Contact = () => {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500/20 to-amber-600/20 backdrop-blur-sm border border-amber-500/30 rounded-full px-6 py-2 mb-6"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-brand-500/10 to-brand-700/20 backdrop-blur-sm border border-brand-500/30 rounded-full px-6 py-2 mb-6"
             >
-              <FaHeadset className="text-amber-400" />
-              <span className="text-amber-300 font-medium">
+              <FaHeadset className="text-brand-400" />
+              <span className="text-brand-300 font-medium">
                 {isArabic ? 'نحن هنا لمساعدتك' : "We're Here to Help"}
               </span>
             </motion.div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
               <span className="text-white">{isArabic ? 'تواصل ' : 'Contact '}</span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 via-brand-300 to-brand-500">
                 {isArabic ? 'معنا' : 'Us'}
               </span>
             </h1>
@@ -104,9 +104,9 @@ const Contact = () => {
               transition={{ delay: 0.2 }}
               className="order-2 lg:order-1"
             >
-              <div className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50 hover:border-amber-500/30 transition-all duration-500">
+              <div className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50 hover:border-brand-500/30 transition-all duration-500">
                 <div className="flex items-center gap-3 mb-8">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-400 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-brand-500 to-brand-400 flex items-center justify-center">
                     <FaPaperPlane className="text-gray-900 text-xl" />
                   </div>
                   <div>
@@ -120,7 +120,7 @@ const Contact = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <label className="flex items-center gap-2 text-gray-300 mb-3 text-sm font-medium">
-                      <FaUser className="text-amber-400" />
+                      <FaUser className="text-brand-400" />
                       {isArabic ? 'الاسم الكامل' : 'Full Name'} *
                     </label>
                     <input
@@ -130,14 +130,14 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       placeholder={isArabic ? 'أدخل اسمك' : 'Enter your name'}
-                      className="w-full px-5 py-4 bg-gray-900/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-500 focus:border-amber-500/50 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all duration-300"
+                      className="w-full px-5 py-4 bg-gray-900/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-500 focus:border-brand-500/50 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all duration-300"
                     />
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <label className="flex items-center gap-2 text-gray-300 mb-3 text-sm font-medium">
-                        <FaEnvelope className="text-amber-400" />
+                        <FaEnvelope className="text-brand-400" />
                         {isArabic ? 'البريد الإلكتروني' : 'Email'} *
                       </label>
                       <input
@@ -147,13 +147,13 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                         placeholder="example@email.com"
-                        className="w-full px-5 py-4 bg-gray-900/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-500 focus:border-amber-500/50 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all duration-300"
+                        className="w-full px-5 py-4 bg-gray-900/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-500 focus:border-brand-500/50 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all duration-300"
                       />
                     </div>
 
                     <div>
                       <label className="flex items-center gap-2 text-gray-300 mb-3 text-sm font-medium">
-                        <FaPhone className="text-amber-400" />
+                        <FaPhone className="text-brand-400" />
                         {isArabic ? 'رقم الهاتف' : 'Phone'} *
                       </label>
                       <input
@@ -163,14 +163,14 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                         placeholder="+20 100 000 0000"
-                        className="w-full px-5 py-4 bg-gray-900/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-500 focus:border-amber-500/50 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all duration-300"
+                        className="w-full px-5 py-4 bg-gray-900/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-500 focus:border-brand-500/50 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all duration-300"
                       />
                     </div>
                   </div>
 
                   <div>
                     <label className="flex items-center gap-2 text-gray-300 mb-3 text-sm font-medium">
-                      <FaStar className="text-amber-400" />
+                      <FaStar className="text-brand-400" />
                       {isArabic ? 'الموضوع' : 'Subject'}
                     </label>
                     <input
@@ -179,13 +179,13 @@ const Contact = () => {
                       value={formData.subject}
                       onChange={handleChange}
                       placeholder={isArabic ? 'اختر موضوع الرسالة' : 'Select message subject'}
-                      className="w-full px-5 py-4 bg-gray-900/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-500 focus:border-amber-500/50 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all duration-300"
+                      className="w-full px-5 py-4 bg-gray-900/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-500 focus:border-brand-500/50 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all duration-300"
                     />
                   </div>
 
                   <div>
                     <label className="flex items-center gap-2 text-gray-300 mb-3 text-sm font-medium">
-                      <FaCommentAlt className="text-amber-400" />
+                      <FaCommentAlt className="text-brand-400" />
                       {isArabic ? 'الرسالة' : 'Message'} *
                     </label>
                     <textarea
@@ -195,7 +195,7 @@ const Contact = () => {
                       required
                       rows="5"
                       placeholder={isArabic ? 'اكتب رسالتك هنا...' : 'Write your message here...'}
-                      className="w-full px-5 py-4 bg-gray-900/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-500 focus:border-amber-500/50 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all duration-300 resize-none"
+                      className="w-full px-5 py-4 bg-gray-900/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-500 focus:border-brand-500/50 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all duration-300 resize-none"
                     ></textarea>
                   </div>
 
@@ -204,7 +204,7 @@ const Contact = () => {
                     disabled={loading}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full bg-gradient-to-r from-amber-500 to-yellow-400 text-gray-900 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-3 hover:shadow-xl hover:shadow-amber-500/30 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full bg-gradient-to-r from-brand-500 to-brand-400 text-gray-900 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-3 hover:shadow-xl hover:shadow-brand-500/30 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {loading ? (
                       <>

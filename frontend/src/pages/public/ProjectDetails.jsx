@@ -80,7 +80,7 @@ const ProjectDetails = () => {
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center justify-center">
         <div className="text-center">
           <div className="relative">
-            <div className="w-20 h-20 border-4 border-amber-200 rounded-full animate-spin border-t-amber-500 mx-auto"></div>
+            <div className="w-20 h-20 border-4 border-brand-200 rounded-full animate-spin border-t-brand-500 mx-auto"></div>
             <div className="w-14 h-14 border-4 border-gray-200 rounded-full animate-spin border-t-gray-500 mx-auto absolute top-3 left-1/2 -translate-x-1/2" style={{ animationDirection: 'reverse' }}></div>
           </div>
           <p className="mt-6 text-gray-400 text-lg">{isArabic ? 'جاري تحميل المشروع...' : 'Loading project...'}</p>
@@ -97,7 +97,7 @@ const ProjectDetails = () => {
             <FaBuilding className="text-4xl text-gray-600" />
           </div>
           <p className="text-white text-2xl mb-4">{isArabic ? 'المشروع غير موجود' : 'Project not found'}</p>
-          <Link to="/projects" className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 transition-colors">
+          <Link to="/projects" className="inline-flex items-center gap-2 text-brand-400 hover:text-brand-300 transition-colors">
             <FaArrowRight className={isArabic ? '' : 'rotate-180'} />
             <span>{isArabic ? 'العودة للمشاريع' : 'Back to Projects'}</span>
           </Link>
@@ -112,19 +112,19 @@ const ProjectDetails = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-[150px]"></div>
+        <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-brand-500/10 rounded-full blur-[150px]"></div>
         <div className="absolute bottom-0 left-1/4 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[150px]"></div>
       </div>
 
       <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: `linear-gradient(rgba(212, 175, 55, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(212, 175, 55, 0.3) 1px, transparent 1px)`,
+        backgroundImage: `linear-gradient(rgba(99, 102, 241, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(99, 102, 241, 0.3) 1px, transparent 1px)`,
         backgroundSize: '50px 50px'
       }}></div>
 
       <div className="relative z-10 pt-32 pb-24">
         <div className="container mx-auto px-4">
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="mb-8">
-            <Link to="/projects" className="inline-flex items-center gap-2 text-gray-400 hover:text-amber-400 transition-colors group">
+            <Link to="/projects" className="inline-flex items-center gap-2 text-gray-400 hover:text-brand-400 transition-colors group">
               <FaArrowRight className={`${isArabic ? '' : 'rotate-180'} group-hover:-translate-x-1 transition-transform`} />
               <span>{isArabic ? 'العودة للمشاريع' : 'Back to Projects'}</span>
             </Link>
@@ -143,7 +143,7 @@ const ProjectDetails = () => {
               
               {project.isFeatured && (
                 <div className="absolute top-6 left-6">
-                  <span className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-yellow-400 text-gray-900 px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                  <span className="inline-flex items-center gap-2 bg-gradient-to-r from-brand-500 to-brand-400 text-gray-900 px-4 py-2 rounded-full text-sm font-bold shadow-lg">
                     <FaStar />{isArabic ? 'مشروع مميز' : 'Featured Project'}
                   </span>
                 </div>
@@ -151,7 +151,7 @@ const ProjectDetails = () => {
 
               <div className="absolute top-6 right-6">
                 <span className="inline-flex items-center gap-2 bg-gray-900/80 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm border border-gray-700/50">
-                  <CategoryIcon className="text-amber-400" />{categoryLabels[project.category]}
+                  <CategoryIcon className="text-brand-400" />{categoryLabels[project.category]}
                 </span>
               </div>
 
@@ -169,7 +169,7 @@ const ProjectDetails = () => {
             {/* Project Info Cards */}
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
               {project.location && (
-                <div className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-xl rounded-2xl p-6 border border-gray-700/50 hover:border-amber-500/30 transition-all duration-300 group">
+                <div className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-xl rounded-2xl p-6 border border-gray-700/50 hover:border-brand-500/30 transition-all duration-300 group">
                   <div className="flex items-center gap-4">
                     <div className="w-14 h-14 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-400 flex items-center justify-center group-hover:scale-110 transition-transform">
                       <FaMapMarkerAlt className="text-white text-2xl" />
@@ -183,7 +183,7 @@ const ProjectDetails = () => {
               )}
 
               {project.area && (
-                <div className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-xl rounded-2xl p-6 border border-gray-700/50 hover:border-amber-500/30 transition-all duration-300 group">
+                <div className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-xl rounded-2xl p-6 border border-gray-700/50 hover:border-brand-500/30 transition-all duration-300 group">
                   <div className="flex items-center gap-4">
                     <div className="w-14 h-14 rounded-xl bg-gradient-to-r from-purple-500 to-pink-400 flex items-center justify-center group-hover:scale-110 transition-transform">
                       <FaRulerCombined className="text-white text-2xl" />
@@ -197,7 +197,7 @@ const ProjectDetails = () => {
               )}
 
               {project.completionDate && (
-                <div className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-xl rounded-2xl p-6 border border-gray-700/50 hover:border-amber-500/30 transition-all duration-300 group">
+                <div className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-xl rounded-2xl p-6 border border-gray-700/50 hover:border-brand-500/30 transition-all duration-300 group">
                   <div className="flex items-center gap-4">
                     <div className="w-14 h-14 rounded-xl bg-gradient-to-r from-green-500 to-emerald-400 flex items-center justify-center group-hover:scale-110 transition-transform">
                       <FaCalendarAlt className="text-white text-2xl" />
@@ -215,7 +215,7 @@ const ProjectDetails = () => {
             {project.description && (
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50 mb-12">
                 <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <span className="w-2 h-8 bg-gradient-to-b from-amber-500 to-yellow-400 rounded-full"></span>
+                  <span className="w-2 h-8 bg-gradient-to-b from-brand-500 to-brand-400 rounded-full"></span>
                   {isArabic ? 'عن المشروع' : 'About the Project'}
                 </h2>
                 <p className="text-gray-300 text-lg leading-relaxed">{isArabic ? project.description.ar : project.description.en}</p>
@@ -226,7 +226,7 @@ const ProjectDetails = () => {
             {project.images && project.images.length > 0 && (
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
                 <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 flex items-center gap-3">
-                  <span className="w-2 h-8 bg-gradient-to-b from-amber-500 to-yellow-400 rounded-full"></span>
+                  <span className="w-2 h-8 bg-gradient-to-b from-brand-500 to-brand-400 rounded-full"></span>
                   {isArabic ? 'معرض الصور' : 'Gallery'}
                   <span className="text-gray-500 text-lg font-normal">({project.images.length} {isArabic ? 'صورة' : 'images'})</span>
                 </h2>
@@ -258,7 +258,7 @@ const ProjectDetails = () => {
                   <h3 className="text-2xl font-bold text-white mb-2">{isArabic ? 'أعجبك هذا المشروع؟' : 'Like this project?'}</h3>
                   <p className="text-gray-400">{isArabic ? 'تواصل معنا لنحقق لك مشروع أحلامك' : 'Contact us to make your dream project come true'}</p>
                 </div>
-                <Link to="/contact" className="bg-gradient-to-r from-amber-500 to-yellow-400 text-gray-900 px-8 py-4 rounded-xl font-bold hover:shadow-xl hover:shadow-amber-500/30 transition-all duration-300 flex items-center gap-2">
+                <Link to="/contact" className="bg-gradient-to-r from-brand-500 to-brand-400 text-gray-900 px-8 py-4 rounded-xl font-bold hover:shadow-xl hover:shadow-brand-500/30 transition-all duration-300 flex items-center gap-2">
                   <span>{isArabic ? 'تواصل معنا' : 'Contact Us'}</span>
                   <FaArrowLeft className={isArabic ? '' : 'rotate-180'} />
                 </Link>
@@ -272,12 +272,12 @@ const ProjectDetails = () => {
       <AnimatePresence>
         {lightboxOpen && allImages.length > 0 && (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-50 bg-black/95 backdrop-blur-sm flex items-center justify-center" onClick={closeLightbox}>
-            <button onClick={closeLightbox} className="absolute top-6 right-6 z-10 bg-gray-800/80 backdrop-blur-sm p-3 rounded-xl text-white hover:text-amber-400 hover:bg-gray-700/80 transition-all border border-gray-700/50"><FaTimes className="text-2xl" /></button>
-            <div className="absolute top-6 left-6 bg-gray-800/80 backdrop-blur-sm px-4 py-2 rounded-xl text-white border border-gray-700/50"><span className="text-amber-400 font-bold">{lightboxIndex + 1}</span><span className="text-gray-400"> / {allImages.length}</span></div>
+            <button onClick={closeLightbox} className="absolute top-6 right-6 z-10 bg-gray-800/80 backdrop-blur-sm p-3 rounded-xl text-white hover:text-brand-400 hover:bg-gray-700/80 transition-all border border-gray-700/50"><FaTimes className="text-2xl" /></button>
+            <div className="absolute top-6 left-6 bg-gray-800/80 backdrop-blur-sm px-4 py-2 rounded-xl text-white border border-gray-700/50"><span className="text-brand-400 font-bold">{lightboxIndex + 1}</span><span className="text-gray-400"> / {allImages.length}</span></div>
             {allImages.length > 1 && (
               <>
-                <button onClick={(e) => { e.stopPropagation(); prevImage(); }} className="absolute left-4 md:left-8 z-10 bg-gray-800/80 backdrop-blur-sm p-4 rounded-xl text-white hover:text-amber-400 hover:bg-gray-700/80 transition-all border border-gray-700/50"><FaChevronLeft className="text-2xl" /></button>
-                <button onClick={(e) => { e.stopPropagation(); nextImage(); }} className="absolute right-4 md:right-8 z-10 bg-gray-800/80 backdrop-blur-sm p-4 rounded-xl text-white hover:text-amber-400 hover:bg-gray-700/80 transition-all border border-gray-700/50"><FaChevronRight className="text-2xl" /></button>
+                <button onClick={(e) => { e.stopPropagation(); prevImage(); }} className="absolute left-4 md:left-8 z-10 bg-gray-800/80 backdrop-blur-sm p-4 rounded-xl text-white hover:text-brand-400 hover:bg-gray-700/80 transition-all border border-gray-700/50"><FaChevronLeft className="text-2xl" /></button>
+                <button onClick={(e) => { e.stopPropagation(); nextImage(); }} className="absolute right-4 md:right-8 z-10 bg-gray-800/80 backdrop-blur-sm p-4 rounded-xl text-white hover:text-brand-400 hover:bg-gray-700/80 transition-all border border-gray-700/50"><FaChevronRight className="text-2xl" /></button>
               </>
             )}
             <motion.div key={lightboxIndex} initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }} className="max-w-7xl max-h-[85vh] p-4" onClick={(e) => e.stopPropagation()}>
@@ -289,7 +289,7 @@ const ProjectDetails = () => {
             {allImages.length > 1 && (
               <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 bg-gray-800/80 backdrop-blur-sm p-3 rounded-xl border border-gray-700/50 max-w-[90vw] overflow-x-auto">
                 {allImages.map((img, idx) => (
-                  <button key={idx} onClick={(e) => { e.stopPropagation(); setLightboxIndex(idx); }} className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all ${idx === lightboxIndex ? 'border-amber-500 scale-110' : 'border-transparent opacity-50 hover:opacity-100'}`}>
+                  <button key={idx} onClick={(e) => { e.stopPropagation(); setLightboxIndex(idx); }} className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all ${idx === lightboxIndex ? 'border-brand-500 scale-110' : 'border-transparent opacity-50 hover:opacity-100'}`}>
                     <img src={img.url} alt="" className="w-full h-full object-cover" />
                   </button>
                 ))}

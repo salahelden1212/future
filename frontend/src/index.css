@@ -4,20 +4,20 @@
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #1a1a1a;
+  background: #0a0f1a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #D4AF37;
-  border-radius: 5px;
+  background: #6366f1;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #B8960F;
+  background: #818cf8;
 }
 
 /* RTL Support */
@@ -27,7 +27,11 @@
 
 /* Base Styles */
 body {
-  @apply bg-dark text-white antialiased;
+  @apply bg-surface text-white antialiased;
+  background-image: 
+    radial-gradient(at 20% 20%, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
+    radial-gradient(at 80% 80%, rgba(6, 182, 212, 0.06) 0%, transparent 50%);
+  min-height: 100vh;
 }
 
 /* Smooth Scroll */
@@ -35,27 +39,65 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Selection */
+::selection {
+  background: rgba(99, 102, 241, 0.3);
+  color: white;
+}
+
 /* Custom Utilities */
 @layer utilities {
   .text-gradient {
-    @apply bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-brand-400 via-brand-500 to-accent-cyan bg-clip-text text-transparent;
   }
   
-  .gold-border {
-    @apply border border-primary/30;
+  .text-gradient-brand {
+    background: linear-gradient(135deg, #818cf8 0%, #6366f1 50%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
   
-  .gold-glow {
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+  .border-brand {
+    @apply border border-brand-500/20;
   }
   
-  .premium-card {
-    @apply bg-dark-light gold-border rounded-lg p-6 hover:gold-glow transition-all duration-300;
+  .glow-brand {
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
+  }
+  
+  .glass {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+  }
+  
+  .glass-strong {
+    @apply bg-white/10 backdrop-blur-2xl border border-white/15;
   }
 }
 
-/* Animations */
+/* Glass Card Component */
 @layer components {
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6;
+    transition: all 0.3s ease;
+  }
+  
+  .glass-card:hover {
+    @apply bg-white/8 border-white/20;
+    box-shadow: 0 8px 32px rgba(99, 102, 241, 0.1);
+  }
+
+  .premium-card {
+    @apply bg-surface-200/50 backdrop-blur-xl border border-white/5 rounded-2xl p-6;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .premium-card:hover {
+    @apply bg-surface-200/80 border-brand-500/30;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(99, 102, 241, 0.1);
+    transform: translateY(-2px);
+  }
+  
   .animate-on-scroll {
     opacity: 0;
     transform: translateY(30px);
@@ -70,17 +112,31 @@ html {
 
 /* Button Styles */
 .btn-primary {
-  @apply bg-primary hover:bg-primary-dark text-dark font-semibold px-8 py-3 rounded-lg transition-all duration-300 hover:scale-105 hover:gold-glow;
+  @apply bg-gradient-to-r from-brand-500 to-brand-600 hover:from-brand-600 hover:to-brand-700 text-white font-semibold px-8 py-3 rounded-xl transition-all duration-300 hover:shadow-brand hover:scale-[1.02];
 }
 
-.btn-outline {
-  @apply border-2 border-primary text-primary hover:bg-primary hover:text-dark font-semibold px-8 py-3 rounded-lg transition-all duration-300;
+.btn-secondary {
+  @apply bg-white/5 hover:bg-white/10 text-white font-semibold px-8 py-3 rounded-xl border border-white/10 hover:border-brand-500/50 transition-all duration-300;
+}
+
+.btn-accent {
+  @apply bg-gradient-to-r from-accent-cyan to-accent-teal hover:from-accent-teal hover:to-accent-emerald text-white font-semibold px-8 py-3 rounded-xl transition-all duration-300 hover:shadow-lg;
+}
+
+/* Input Styles */
+.input-brand {
+  @apply w-full px-4 py-3 bg-surface-200/50 border border-white/10 rounded-xl text-white placeholder-muted focus:border-brand-500/50 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all duration-300;
+}
+
+/* Badge Styles */
+.badge-brand {
+  @apply inline-flex items-center gap-1.5 px-3 py-1 bg-brand-500/10 border border-brand-500/20 rounded-full text-brand-400 text-sm font-medium;
 }
 
 /* Loading Spinner */
 .spinner {
-  border: 3px solid rgba(212, 175, 55, 0.1);
-  border-top-color: #D4AF37;
+  border: 3px solid rgba(99, 102, 241, 0.1);
+  border-top-color: #6366f1;
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -89,4 +145,41 @@ html {
 
 @keyframes spin {
   to { transform: rotate(360deg); }
+}
+
+/* Gradient Border Trick */
+.gradient-border {
+  position: relative;
+  background: #111827;
+  border-radius: 1rem;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, #6366f1, #06b6d4);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Page Transitions */
+.page-enter {
+  animation: pageIn 0.4s ease-out;
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
