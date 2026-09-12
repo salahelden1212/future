@@ -201,7 +201,7 @@ const Dashboard = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: index * 0.05 }}
-                  className="flex justify-between items-center p-3 rounded-xl bg-white/3 hover:bg-white/5 transition-colors"
+                  className="flex justify-between items-center p-3 rounded-xl bg-white/5 hover:bg-white/10 transition-colors"
                 >
                   <div className="flex items-center gap-3">
                     <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-brand-500 to-accent-cyan flex items-center justify-center text-white font-bold text-xs">
@@ -247,7 +247,7 @@ const Dashboard = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: index * 0.05 }}
-                  className="flex justify-between items-center p-3 rounded-xl bg-white/3 hover:bg-white/5 transition-colors"
+                  className="flex justify-between items-center p-3 rounded-xl bg-white/5 hover:bg-white/10 transition-colors"
                 >
                   <div className="flex items-center gap-3">
                     <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center text-white font-bold text-xs">

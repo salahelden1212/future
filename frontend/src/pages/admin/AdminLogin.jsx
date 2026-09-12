@@ -40,7 +40,7 @@ const AdminLogin = () => {
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-brand-500/10 rounded-full blur-[150px]"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-accent-cyan/8 rounded-full blur-[150px]"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-accent-cyan/10 rounded-full blur-[150px]"></div>
       </div>
 
       <motion.div
