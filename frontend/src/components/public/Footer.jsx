@@ -162,7 +162,7 @@ const Footer = () => {
                   <div className="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center group-hover:bg-purple-500/20 transition-colors">
                     <FaEnvelope className="text-purple-400" />
                   </div>
-                  <span>{settings?.email || 'info@vertexfinish.com'}</span>
+                  <span>{settings?.email || 'info@futurefinish.com'}</span>
                 </a>
               </li>
               <li className="flex items-start gap-3 text-gray-400">

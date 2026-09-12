@@ -110,7 +110,7 @@ const AdminLogin = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  placeholder="admin@vertex.com"
+                  placeholder="admin@futurefinish.com"
                   className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-500 focus:border-amber-500/50 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all duration-300"
                 />
               </div>

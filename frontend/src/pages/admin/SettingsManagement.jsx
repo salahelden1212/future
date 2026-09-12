@@ -153,7 +153,7 @@ const SettingsManagement = () => {
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white transition-all"
-                placeholder="info@vertexfinish.com"
+                placeholder="info@futurefinish.com"
               />
             </div>
 
@@ -219,12 +219,12 @@ const SettingsManagement = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { key: 'facebook', icon: FaFacebook, color: 'text-blue-500', placeholder: 'https://facebook.com/vertexfinish' },
-              { key: 'instagram', icon: FaInstagram, color: 'text-pink-500', placeholder: 'https://instagram.com/vertexfinish' },
-              { key: 'twitter', icon: FaTwitter, color: 'text-blue-400', label: 'Twitter / X', placeholder: 'https://x.com/vertexfinish' },
-              { key: 'linkedin', icon: FaLinkedin, color: 'text-blue-600', placeholder: 'https://linkedin.com/company/vertexfinish' },
-              { key: 'youtube', icon: FaYoutube, color: 'text-red-500', placeholder: 'https://youtube.com/@vertexfinish' },
-              { key: 'tiktok', icon: FaTiktok, color: 'text-white', placeholder: 'https://tiktok.com/@vertexfinish' },
+              { key: 'facebook', icon: FaFacebook, color: 'text-blue-500', placeholder: 'https://facebook.com/futurefinish' },
+              { key: 'instagram', icon: FaInstagram, color: 'text-pink-500', placeholder: 'https://instagram.com/futurefinish' },
+              { key: 'twitter', icon: FaTwitter, color: 'text-blue-400', label: 'Twitter / X', placeholder: 'https://x.com/futurefinish' },
+              { key: 'linkedin', icon: FaLinkedin, color: 'text-blue-600', placeholder: 'https://linkedin.com/company/futurefinish' },
+              { key: 'youtube', icon: FaYoutube, color: 'text-red-500', placeholder: 'https://youtube.com/@futurefinish' },
+              { key: 'tiktok', icon: FaTiktok, color: 'text-white', placeholder: 'https://tiktok.com/@futurefinish' },
             ].map((social) => (
               <div key={social.key}>
                 <label className="block text-gray-300 mb-2 font-medium flex items-center gap-2">

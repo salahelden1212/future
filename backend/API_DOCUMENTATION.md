@@ -38,7 +38,7 @@ POST /api/auth/login
 Content-Type: application/json
 
 {
-  "email": "admin@vertexfinish.com",
+  "email": "admin@futurefinish.com",
   "password": "Admin@123456"
 }
 ```
@@ -51,7 +51,7 @@ Content-Type: application/json
   "user": {
     "id": "60f7b3b3b3b3b3b3b3b3b3b3",
     "name": "Admin",
-    "email": "admin@vertexfinish.com",
+    "email": "admin@futurefinish.com",
     "role": "super-admin"
   }
 }
@@ -464,16 +464,16 @@ Content-Type: application/json
 
 {
   "phone": "+966501234567",
-  "email": "info@vertexfinish.com",
+  "email": "info@futurefinish.com",
   "whatsapp": "+966501234567",
   "address": {
     "ar": "الرياض، السعودية",
     "en": "Riyadh, Saudi Arabia"
   },
   "socialMedia": {
-    "facebook": "https://facebook.com/vertexfinish",
-    "instagram": "https://instagram.com/vertexfinish",
-    "twitter": "https://twitter.com/vertexfinish"
+    "facebook": "https://facebook.com/futurefinish",
+    "instagram": "https://instagram.com/futurefinish",
+    "twitter": "https://twitter.com/futurefinish"
   }
 }
 ```

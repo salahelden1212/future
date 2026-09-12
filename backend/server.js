@@ -30,7 +30,7 @@ app.use(mongoSanitize());
 // CORS Middleware (MUST be before routes)
 app.use(cors({
   origin: [
-    'https://vertex-frontend-psi.vercel.app',
+    'https://future-frontend.vercel.app',
     'http://localhost:5173'
   ],
   credentials: true
@@ -81,7 +81,7 @@ app.use('/api/milestones', milestoneRoutes);
 
 // Health Check
 app.get('/api/health', (req, res) => {
-  res.json({ status: 'OK', message: 'Vertex Finish API is running' });
+  res.json({ status: 'OK', message: 'Future Finish API is running' });
 });
 
 // Error Handler (must be last)

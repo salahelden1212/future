@@ -41,7 +41,7 @@ Create a `.env` file in the root directory:
 
 ```env
 PORT=5000
-MONGODB_URI=mongodb://localhost:27017/vertex
+MONGODB_URI=mongodb://localhost:27017/future
 JWT_SECRET=your_super_secret_jwt_key_here
 NODE_ENV=development
 ```
@@ -215,7 +215,7 @@ Authorization: Bearer YOUR_JWT_TOKEN
 ## 📝 Default Admin Credentials
 
 After running `npm run seed`:
-- **Email**: admin@vertex.com
+- **Email**: admin@futurefinish.com
 - **Password**: admin123
 
 ⚠️ **Important**: Change these credentials in production!
@@ -245,7 +245,7 @@ All errors follow this format:
 
 ## 🤝 Contributing
 
-This is part of the Vertex Construction Management System.
+This is part of the Future Construction Management System.
 
 ## 📄 License
 
@@ -253,4 +253,4 @@ MIT License
 
 ## 🔗 Related Repositories
 
-- Frontend: [vertex-frontend](https://github.com/YOUR_USERNAME/vertex-frontend)
+- Frontend: [future-frontend](https://github.com/salahelden1212/future)

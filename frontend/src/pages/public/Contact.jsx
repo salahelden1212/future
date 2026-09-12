@@ -241,7 +241,7 @@ const Contact = () => {
                 { 
                   icon: FaEnvelope, 
                   title: isArabic ? 'البريد الإلكتروني' : 'Email', 
-                  value: settings?.email || 'info@vertexfinish.com',
+                  value: settings?.email || 'info@futurefinish.com',
                   gradient: 'from-purple-500 to-pink-400',
                   hoverBorder: 'hover:border-purple-500/50'
                 },

@@ -1,7 +1,7 @@
 {
-  "name": "vertex-finish-backend",
+  "name": "future-backend",
   "version": "1.0.0",
-  "description": "Backend API for Vertex Finish - Premium Finishing Company",
+  "description": "Backend API for Future Finish - Premium Finishing Company",
   "main": "server.js",
   "type": "module",
   "scripts": {
@@ -10,12 +10,12 @@
     "seed": "node utils/seedAdmin.js"
   },
   "keywords": [
-    "vertex",
+    "future",
     "finish",
     "crm",
     "backend"
   ],
-  "author": "Vertex Finish",
+  "author": "Future Finish",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",

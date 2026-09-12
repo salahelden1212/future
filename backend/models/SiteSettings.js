@@ -12,7 +12,7 @@ const siteSettingsSchema = new mongoose.Schema({
     type: String,
     required: true,
     trim: true,
-    default: 'info@vertexfinish.com'
+    default: 'info@futurefinish.com'
   },
   whatsapp: {
     type: String,
@@ -85,11 +85,11 @@ const siteSettingsSchema = new mongoose.Schema({
   footerText: {
     ar: {
       type: String,
-      default: 'جميع الحقوق محفوظة © 2024 فيرتكس فينش'
+      default: 'جميع الحقوق محفوظة © 2024 فيوتشر فينش'
     },
     en: {
       type: String,
-      default: 'All Rights Reserved © 2024 Vertex Finish'
+      default: 'All Rights Reserved © 2024 Future Finish'
     }
   },
 
@@ -98,11 +98,11 @@ const siteSettingsSchema = new mongoose.Schema({
     title: {
       ar: {
         type: String,
-        default: 'فيرتكس فينش - التشطيبات على أعلى مستوى'
+        default: 'فيوتشر فينش - التشطيبات على أعلى مستوى'
       },
       en: {
         type: String,
-        default: 'Vertex Finish - Finishing at the Highest Level'
+        default: 'Future Finish - Finishing at the Highest Level'
       }
     },
     description: {
@@ -118,11 +118,11 @@ const siteSettingsSchema = new mongoose.Schema({
     keywords: {
       ar: {
         type: String,
-        default: 'تشطيبات, ديكور, تصميم داخلي, فيرتكس'
+        default: 'تشطيبات, ديكور, تصميم داخلي, فيوتشر'
       },
       en: {
         type: String,
-        default: 'finishing, decoration, interior design, vertex'
+        default: 'finishing, decoration, interior design, future'
       }
     }
   },

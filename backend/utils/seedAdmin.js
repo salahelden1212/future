@@ -20,7 +20,7 @@ const seedAdmin = async () => {
     // Create admin
     const admin = await AdminUser.create({
       name: 'Admin',
-      email: process.env.ADMIN_EMAIL || 'admin@vertexfinish.com',
+      email: process.env.ADMIN_EMAIL || 'admin@futurefinish.com',
       password: process.env.ADMIN_PASSWORD || 'Admin@123456',
       role: 'super-admin'
     });
