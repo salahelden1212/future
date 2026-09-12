@@ -1,6 +1,6 @@
-# Vertex Backend API
+# Future Backend API
 
-RESTful API backend for Vertex Construction & Real Estate Management System built with Node.js, Express, and MongoDB.
+RESTful API backend for Future Construction & Real Estate Management System built with Node.js, Express, and MongoDB.
 
 ## 🌟 Features
 

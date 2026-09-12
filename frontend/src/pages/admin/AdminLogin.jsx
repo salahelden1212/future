@@ -68,7 +68,7 @@ const AdminLogin = () => {
             >
               <img 
                 src={logoDark} 
-                alt="Vertex Finish" 
+                alt="Future Finish" 
                 className="h-20 w-auto mx-auto"
                 onError={(e) => { e.target.style.display = 'none'; }}
               />
@@ -84,7 +84,7 @@ const AdminLogin = () => {
                 <span className="text-amber-300 text-sm font-medium">Admin Portal</span>
               </div>
               <h1 className="text-3xl font-bold mb-2">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500">VERTEX</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500">FUTURE</span>
                 <span className="text-white ml-2">ADMIN</span>
               </h1>
               <p className="text-gray-400">Sign in to access your dashboard</p>
@@ -180,7 +180,7 @@ const AdminLogin = () => {
             className="mt-8 pt-6 border-t border-gray-700/50 text-center"
           >
             <p className="text-gray-500 text-sm">
-              Secured by <span className="text-amber-400">Vertex Finish</span>
+              Secured by <span className="text-amber-400">Future Finish</span>
             </p>
           </motion.div>
         </div>

@@ -147,7 +147,7 @@ const Home = () => {
             >
               <img 
                 src={logoDark} 
-                alt="Vertex Finish" 
+                alt="Future Finish" 
                 className="h-28 md:h-36 lg:h-44 w-auto mx-auto"
               />
             </motion.div>
@@ -165,7 +165,7 @@ const Home = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.5, type: 'spring' }}
                 >
-                  VERTEX
+                  FUTURE
                 </motion.span>
                 <motion.span 
                   className="text-white ml-2 md:ml-4"
@@ -330,7 +330,7 @@ const Home = () => {
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               <span className="text-white">{isArabic ? 'لماذا ' : 'Why '}</span>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500">
-                Vertex Finish
+                Future Finish
               </span>
               <span className="text-white"></span>
             </h2>

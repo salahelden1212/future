@@ -50,7 +50,7 @@ const Navbar = () => {
           <Link to="/" className="flex items-center gap-3 group">
             <img 
               src={logoDark} 
-              alt="Vertex Finish" 
+              alt="Future Finish" 
               className="h-12 md:h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
               onError={(e) => {
                 e.target.onerror = null;
@@ -59,7 +59,7 @@ const Navbar = () => {
             />
             <div className="hidden sm:block">
               <h1 className="text-xl md:text-2xl font-black tracking-wide">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500">VERTEX</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500">FUTURE</span>
                 <span className="text-white ml-1">FINISH</span>
               </h1>
               <p className="text-[10px] text-gray-400 tracking-[0.2em] uppercase">Finishing at the highest level</p>

@@ -15,7 +15,7 @@ const PublicLayout = () => {
       {/* WhatsApp Floating Widget */}
       <FloatingWhatsApp
         phoneNumber="+201120068410"
-        accountName="Vertex Finish"
+        accountName="Future Finish"
         statusMessage="متصل الآن"
         chatMessage="مرحباً! 👋 كيف يمكننا مساعدتك اليوم؟"
         placeholder="اكتب رسالتك..."

@@ -14,7 +14,7 @@ const resources = {
       },
       // Hero
       hero: {
-        title: 'VERTEX FINISH',
+        title: 'FUTURE FINISH',
         slogan: 'Finishing at the Highest Level',
         cta: 'Request Consultation',
         whatsapp: 'Contact via WhatsApp',
@@ -37,7 +37,7 @@ const resources = {
       // Footer
       footer: {
         rights: 'All Rights Reserved',
-        company: 'Vertex Finish',
+        company: 'Future Finish',
         quickLinks: 'Quick Links',
         contactInfo: 'Contact Info',
         followUs: 'Follow Us',
@@ -56,7 +56,7 @@ const resources = {
       },
       // Hero
       hero: {
-        title: 'فيرتكس فينش',
+        title: 'فيوتشر فينش',
         slogan: 'التشطيبات على أعلى مستوى',
         cta: 'اطلب استشارة',
         whatsapp: 'تواصل عبر واتساب',
@@ -79,7 +79,7 @@ const resources = {
       // Footer
       footer: {
         rights: 'جميع الحقوق محفوظة',
-        company: 'فيرتكس فينش',
+        company: 'فيوتشر فينش',
         quickLinks: 'روابط سريعة',
         contactInfo: 'معلومات التواصل',
         followUs: 'تابعنا',

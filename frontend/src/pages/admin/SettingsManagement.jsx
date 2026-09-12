@@ -273,7 +273,7 @@ const SettingsManagement = () => {
                     value={formData.seo.title.en}
                     onChange={(e) => setFormData({ ...formData, seo: { ...formData.seo, title: { ...formData.seo.title, en: e.target.value } } })}
                     className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl focus:border-amber-500/50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 text-white transition-all"
-                    placeholder="Vertex Finish - Premium Finishing Services"
+                    placeholder="Future Finish - Premium Finishing Services"
                   />
                 </div>
 

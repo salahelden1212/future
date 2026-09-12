@@ -1,6 +1,6 @@
-# Vertex Frontend
+# Future Frontend
 
-Modern React-based frontend for Vertex Construction & Real Estate Management System with premium dark UI design.
+Modern React-based frontend for Future Construction & Real Estate Management System with premium dark UI design.
 
 ## 🌟 Features
 
@@ -113,7 +113,7 @@ src/
 
 ## 🤝 Contributing
 
-This is part of the Vertex Construction Management System.
+This is part of the Future Construction Management System.
 
 ## 📄 License
 

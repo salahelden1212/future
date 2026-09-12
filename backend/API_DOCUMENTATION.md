@@ -24,7 +24,7 @@ GET /api/health
 ```json
 {
   "status": "OK",
-  "message": "Vertex Finish API is running"
+  "message": "Future Finish API is running"
 }
 ```
 

@@ -91,11 +91,11 @@ const About = () => {
             >
               <img 
                 src={logoDark} 
-                alt="Vertex Finish" 
+                alt="Future Finish" 
                 className="h-32 md:h-40 w-auto object-contain mb-4"
               />
               <h2 className="text-3xl md:text-4xl font-black tracking-wider">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500">VERTEX</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500">FUTURE</span>
                 <span className="text-white ml-2">FINISH</span>
               </h2>
               <p className="text-sm text-gray-400 tracking-[0.25em] uppercase mt-2">Finishing at the highest level</p>
@@ -103,8 +103,8 @@ const About = () => {
 
             <p className="text-xl md:text-2xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
               {isArabic
-                ? 'فيرتكس فينش هي شركة رائدة في مجال التشطيبات الراقية، نقدم خدمات متكاملة للمشاريع السكنية والتجارية والإدارية بأعلى معايير الجودة والاحترافية.'
-                : 'Vertex Finish is a leading company in premium finishing, offering integrated services for residential, commercial and administrative projects with the highest standards of quality and professionalism.'}
+                ? 'فيوتشر فينش هي شركة رائدة في مجال التشطيبات الراقية، نقدم خدمات متكاملة للمشاريع السكنية والتجارية والإدارية بأعلى معايير الجودة والاحترافية.'
+                : 'Future Finish is a leading company in premium finishing, offering integrated services for residential, commercial and administrative projects with the highest standards of quality and professionalism.'}
             </p>
           </motion.div>
 

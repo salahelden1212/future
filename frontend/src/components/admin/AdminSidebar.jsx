@@ -79,12 +79,12 @@ const AdminSidebar = ({ isOpen, setIsOpen }) => {
                 <Link to="/admin" className="flex items-center gap-3">
                   <img 
                     src={logoDark} 
-                    alt="Vertex" 
+                    alt="Future" 
                     className="h-10 w-auto"
                     onError={(e) => { e.target.style.display = 'none'; }}
                   />
                   <div>
-                    <span className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-300">VERTEX</span>
+                    <span className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-300">FUTURE</span>
                     <span className="text-lg font-bold text-white ml-1">ADMIN</span>
                   </div>
                 </Link>

@@ -81,7 +81,7 @@ const Footer = () => {
             <Link to="/" className="inline-flex items-center gap-4 mb-6 group">
               <img 
                 src={logoDark} 
-                alt="Vertex Finish" 
+                alt="Future Finish" 
                 className="h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
                 onError={(e) => {
                   e.target.onerror = null;
@@ -90,7 +90,7 @@ const Footer = () => {
               />
               <div>
                 <h2 className="text-2xl md:text-3xl font-black tracking-wide">
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500">VERTEX</span>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500">FUTURE</span>
                   <span className="text-white ml-1">FINISH</span>
                 </h2>
                 <p className="text-xs text-gray-500 tracking-[0.15em] uppercase mt-1">Finishing at the highest level</p>
@@ -208,8 +208,8 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-500 text-sm text-center md:text-right flex items-center gap-2">
               {isArabic 
-                ? `© ${currentYear} فيرتكس فينش. جميع الحقوق محفوظة`
-                : `© ${currentYear} Vertex Finish. All Rights Reserved`}
+                ? `© ${currentYear} فيوتشر فينش. جميع الحقوق محفوظة`
+                : `© ${currentYear} Future Finish. All Rights Reserved`}
               <FaHeart className="text-red-500 text-xs animate-pulse" />
             </p>
             
